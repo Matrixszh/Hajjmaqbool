@@ -1,0 +1,35 @@
+import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ExpandableProjectsSection from "@/components/ExpandableProjectsSection";
+import TeamSection from "@/components/TeamSection";
+import TestimonialSection from "@/components/TestimonialSection";
+import ShowcaseGallery from "@/components/ShowcaseGallery";
+import ContactCTA from "@/components/ContactCTA";
+import BrandTagline from "@/components/BrandTagline";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import LoadingAnimation from "@/components/LoadingAnimation";
+import EP2 from "@/components/EP2";
+import Header1 from "@/components/Header";
+
+import Projects2 from "@/components/projects";
+import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
+
+const Projects = () => {
+
+
+
+  return (
+    <div className="min-h-screen">
+      <Header1/>
+      <HeroSection />
+      <Projects2 />
+      <BrandTagline />
+      <Footer />
+    </div>
+  );
+};
+
+export default Projects;
