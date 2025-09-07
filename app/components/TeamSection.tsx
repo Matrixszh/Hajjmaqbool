@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 
 const TeamSection = () => {
   
@@ -27,12 +26,12 @@ const TeamSection = () => {
               View all of our past work here
             </p>
             <div className="flex flex-justify">
-              <Link to="/contact">
+              <a href="/contact">
               <button className="text-sm px-[3] bg-gradient-to-r from-[#081E43] to-black border-black border-2 text-white hover:bg-none hover:bg-none rounded-full hover:text-white hover:border-white   px-8 py-3 text-lg transition-all duration-300 ease-in-out">
                 Get In Touch 
                 
               </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
