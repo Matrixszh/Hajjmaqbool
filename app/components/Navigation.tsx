@@ -51,10 +51,10 @@ const Navigation = () => {
         : min + Math.random() * max;
     };
 
-    let animationInterval: NodeJS.Timeout;
+    let animationInterval: ReturnType<typeof setInterval> | null = null;
 
     return () => {
-      clearInterval(animationInterval);
+      if (animationInterval) clearInterval(animationInterval);
     };
   }, []);
 
