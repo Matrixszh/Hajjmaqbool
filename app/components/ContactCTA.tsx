@@ -1,5 +1,4 @@
 import { Button } from "@/app/components/ui/button";
-import { Link } from "react-router-dom";
 
 const ContactCTA = () => {
   return (
@@ -9,19 +8,19 @@ const ContactCTA = () => {
           Contact Us For To Start Your <em className="italic text-text-4xl font-light text-blue-400 mb-6">Dream</em>
         </h2>
         <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-          In order to provide you the best service and features we want to asset 
-          all your requirements and help you a helping plan that accommodate your 
+          In order to provide you the best service and features we want to asset
+          all your requirements and help you a helping plan that accommodate your
           entire living environment and lifestyle.
         </p>
-        <Link to="/contact">
-        <Button 
-  size="lg"
-  variant="outline"
-  className="bg-gradient-to-r from-[#081E43] to-black border-white text-white hover:bg-none hover:bg-white/30 rounded-full hover:text-white px-8 py-3 text-lg transition-all duration-300 ease-in-out"
->
-  Contact Us
-</Button>
-</Link>
+        <a href="/contact">
+          <Button
+            size="lg"
+            variant="outline"
+            className="bg-gradient-to-r from-[#081E43] to-black border-white text-white hover:bg-none hover:bg-white/30 rounded-full hover:text-white px-8 py-3 text-lg transition-all duration-300 ease-in-out"
+          >
+            Contact Us
+          </Button>
+        </a>
 
       </div>
     </section>

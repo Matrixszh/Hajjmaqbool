@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex justify-center items-center mt-4">
               <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 overflow-hidden">
                 <img
-                  src="/logo.png" // Replace with your logo path
+                  src="/window.svg"
                   alt="Company Logo"
                   className="w-50 h-50 object-contain"
                 />

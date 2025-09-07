@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
 const AboutSection = () => {
   const projects = [
     {
@@ -8,7 +5,7 @@ const AboutSection = () => {
       title: "Taher Heights",
       subtitle: "Mixed-Use Development",
       description: "A landmark mixed-use development that seamlessly blends residential comfort with commercial excellence. This project showcases modern architectural innovation while maintaining environmental sustainability. Completed in 2023, it stands as a testament to our commitment to quality construction and urban planning.",
-      image: "/interior-1.jpg"
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&auto=format"
     },
     {
       id: 2,

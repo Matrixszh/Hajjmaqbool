@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
@@ -21,7 +18,7 @@ const AboutSection = () => {
           {/* Left side - Image */}
           <div>
             <img
-              src="/Wrw.jpg"
+              src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200&h=800&fit=crop&auto=format"
               alt="Modern luxury house exterior"
               className="w-full h-auto rounded-lg shadow-lg"
             />

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,10 +29,10 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        isScrolled 
-          ? 'bg-white/80 backdrop-blur-md shadow-lg' 
+        isScrolled
+          ? 'bg-white/80 backdrop-blur-md shadow-lg'
           : 'bg-white shadow-lg'
       }`}
     >
@@ -41,9 +42,9 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
               <img
-                src="/logo.png" // Replace with your logo path
+                src="/window.svg"
                 alt="Your Company Logo"
-                className="h-8 w-auto" // Adjust height as needed
+                className="h-8 w-auto"
               />
             </a>
           </div>
@@ -110,10 +111,10 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div 
+        <div
           className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 transition-all duration-300 ${
-            isScrolled 
-              ? 'bg-gray-50/90 backdrop-blur-md' 
+            isScrolled
+              ? 'bg-gray-50/90 backdrop-blur-md'
               : 'bg-gray-50'
           }`}
         >
