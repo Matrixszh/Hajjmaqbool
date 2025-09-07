@@ -7,6 +7,7 @@ const Navigation = () => {
   const [isSocialMediaActive, setIsSocialMediaActive] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
   const [showBlueDash, setShowBlueDash] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(0);
 
   const siteNavigationRef = useRef(null);
   const socialMediaRef = useRef(null);
@@ -32,7 +33,15 @@ const Navigation = () => {
     }
   }, []);
 
-  // Equalizer animation
+  // Track viewport width for animations (avoids window access during SSR)
+  useEffect(() => {
+    const update = () => setViewportWidth(window.innerWidth);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  // Equalizer animation (kept for future use)
   useEffect(() => {
     const randomBetween = (range: number[]): number => {
       const min = range[0];
@@ -44,14 +53,10 @@ const Navigation = () => {
 
     let animationInterval: NodeJS.Timeout;
 
-
-
     return () => {
       clearInterval(animationInterval);
     };
   }, []);
-
-
 
   const handleHamburgerClick = () => {
     if (!isSiteNavActive) {
@@ -60,21 +65,25 @@ const Navigation = () => {
       setTimeout(() => {
         setShowBlueDash(false);
         setIsSiteNavActive(true);
-        document.body.classList.add("overflow-hidden");
+        if (typeof document !== "undefined") {
+          document.body.classList.add("overflow-hidden");
+        }
       }, 400);
     } else {
       // Close navigation
       setIsSiteNavActive(false);
-      document.body.classList.remove("overflow-hidden");
+      if (typeof document !== "undefined") {
+        document.body.classList.remove("overflow-hidden");
+      }
     }
   };
 
   const handleFollowUsClick = () => {
     setIsSocialMediaActive(!isSocialMediaActive);
-    document.body.classList.toggle("overflow-hidden");
+    if (typeof document !== "undefined") {
+      document.body.classList.toggle("overflow-hidden");
+    }
   };
-
-
 
   return (
     <>
@@ -89,7 +98,7 @@ const Navigation = () => {
                 animate={{
                   scaleX: [0, 1, 1, 0],
                   opacity: [0, 1, 1, 0],
-                  x: [0, 0, 0, window.innerWidth * 0.8]
+                  x: [0, 0, 0, viewportWidth * 0.8]
                 }}
                 transition={{
                   duration: 0.4,
@@ -104,7 +113,7 @@ const Navigation = () => {
                 animate={{
                   scaleX: [0, 1, 1, 0],
                   opacity: [0, 0.8, 0.8, 0],
-                  x: [0, 0, 0, window.innerWidth * 0.6]
+                  x: [0, 0, 0, viewportWidth * 0.6]
                 }}
                 transition={{
                   duration: 0.3,
@@ -120,7 +129,7 @@ const Navigation = () => {
                 animate={{
                   scaleX: [0, 1, 1, 0],
                   opacity: [0, 0.6, 0.6, 0],
-                  x: [0, 0, 0, window.innerWidth * 0.4]
+                  x: [0, 0, 0, viewportWidth * 0.4]
                 }}
                 transition={{
                   duration: 0.2,
@@ -175,8 +184,8 @@ const Navigation = () => {
                 <small className="block text-luxury-gray mt-2">All About Us</small>
               </li>
               <li>
-                <a 
-                  href="/contact" 
+                <a
+                  href="/contact"
                   className="block text-4xl font-light text-white hover:text-luxury-gold transition-colors"
                   onClick={handleHamburgerClick}
                 >
@@ -225,16 +234,14 @@ const Navigation = () => {
           </div>
         </div>
 
-
-
         <main className="relative">
           {/* Left Side */}
           <aside className="absolute left-0 top-0 z-40 flex h-screen w-20 flex-col items-center justify-between bg-luxury-darker py-8">
             <div className="logo">
               <a href="#home">
-                <img 
-                  src="/src/assets/logo.png" 
-                  alt="Structure Logo" 
+                <img
+                  src="/window.svg"
+                  alt="Structure Logo"
                   className="w-8 h-8 object-contain filter brightness-0 invert"
                 />
               </a>
@@ -257,12 +264,11 @@ const Navigation = () => {
             </div>
 
             <div className="flex flex-col items-center space-y-8">
-              
+
 
 
             </div>
           </aside>
-
 
         </main>
       </div>
