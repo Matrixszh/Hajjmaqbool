@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import interior1 from "@/assets/interior-1.jpg";
-import interior2 from "@/assets/interior-2.jpg";
+import { Button } from "@/app/components/ui/button";
+import { Card, CardContent } from "@/app/components/ui/card";
 
 const ProjectsSection = () => {
   const projects = [
@@ -9,21 +8,21 @@ const ProjectsSection = () => {
       id: 1,
       title: "Modern Villa Collection",
       description: "Luxury residential development featuring contemporary design and sustainable materials.",
-      image: interior1,
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&auto=format",
       category: "Residential"
     },
     {
       id: 2,
       title: "Urban Loft Series",
       description: "Sophisticated city living spaces that maximize comfort and style in urban environments.",
-      image: interior2,
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop&auto=format",
       category: "Commercial"
     },
     {
       id: 3,
       title: "Sustainable Homes",
       description: "Eco-friendly housing solutions that don't compromise on luxury or design excellence.",
-      image: interior1,
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&auto=format",
       category: "Sustainable"
     }
   ];
