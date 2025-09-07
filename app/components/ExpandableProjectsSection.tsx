@@ -21,7 +21,7 @@ const ExpandableProjectsSection = () => {
       id: 1,
       title: "Taher Heights",
       category: "Residential & Commercial",
-      image: "/Th.jpg",
+      image: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=1200&h=800&fit=crop&auto=format",
       description: "A landmark mixed-use development that seamlessly blends residential comfort with commercial excellence. This project showcases modern architectural innovation while maintaining environmental sustainability.",
       details: {
         area: "450,000 sq ft",
