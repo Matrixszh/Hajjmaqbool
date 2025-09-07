@@ -1,4 +1,6 @@
 import { useState } from "react";
+"use client";
+import { useState } from "react";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -46,9 +48,9 @@ const TestimonialSection = () => {
             Outcomes That Need No <em className="italic font-light text-blue-400">Introduction</em>
           </h2>
           <p className="text-lg text-white/80 max-w-4xl mx-auto leading-relaxed">
-            With 20 years in real estate and car rentals, I'm proud to have teamed up 
-            with talented pros to create spaces people love and experiences that keep 
-            them moving. From vibrant communities to memorable journeys, it's all 
+            With 20 years in real estate and car rentals, I'm proud to have teamed up
+            with talented pros to create spaces people love and experiences that keep
+            them moving. From vibrant communities to memorable journeys, it's all
             about making life a little richer.
           </p>
         </div>
