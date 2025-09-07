@@ -34,7 +34,7 @@ const ExpandableProjectsSection = () => {
       id: 2,
       title: "Vizion Harmony",
       category: "Residential",
-      image: "/interior-1.jpg",
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&auto=format",
       description: "An elegant residential complex designed for modern families seeking luxury and comfort. Features state-of-the-art amenities and premium finishes throughout.",
       details: {
         area: "280,000 sq ft",
