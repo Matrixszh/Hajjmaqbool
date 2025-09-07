@@ -11,7 +11,7 @@ const TeamSection = () => {
           {/* Left side - Architectural Image */}
           <div className="relative">
             <img 
-              src="/hero-image.jpg"
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=800&fit=crop&auto=format"
               alt="Architectural ceiling structure"
               className="w-full h-full object-cover min-h-[400px]"
             />
