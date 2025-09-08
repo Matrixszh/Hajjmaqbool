@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="lg:px-6  mx-6 text-center relative z-10">
         <h1 className="px-10 text-hero font-bold text-white mb-6 leading-tight">
-          NUSUK <span className="italic font-light">(hajj)</span> ASISTANCE
+          NUSUK HAJJ ASISTANCE
           <br />
           COMMITTE
         </h1>

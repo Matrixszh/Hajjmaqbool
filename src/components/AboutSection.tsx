@@ -40,7 +40,7 @@ const AboutSection = () => {
           </div>
           <div>
             <img
-              src="/Wrw.jpg"
+              src="/about.jpg"
               alt="Modern luxury house exterior"
               className="w-full h-[83vh] rounded-lg shadow-lg"
             />

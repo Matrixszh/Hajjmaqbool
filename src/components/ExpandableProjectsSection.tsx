@@ -83,15 +83,13 @@ const ExpandableProjectsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium text-white mb-6">
-            View Our Most Successful{" "}
-            <span className="italic font-light text-green-400">Projects</span>
+           Hajj Application{" "}
+            <span className="italic font-light text-green-400">Timeline</span>
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-            I have worked on multiple projects throughout my{" "}
-            <span className="italic text-green-400">career</span> and have
-            achieved clients that are always satisfied. These are some of my
-            most decorated{" "}
-            <span className="italic text-green-400">projects</span>
+             Only use the{" "}
+            <span className="italic text-green-400">official Nusuk portal</span> for registration and payment. Any other route risks your Hajj and your{" "}
+            <span className="italic text-green-400"> personal safety</span>
           </p>
         </div>
 
