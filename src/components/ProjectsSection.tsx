@@ -58,7 +58,7 @@ const ProjectsSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-luxury-darker mb-3">{project.title}</h3>
                 <p className="text-luxury-gray mb-4">{project.description}</p>
-                <Button variant="ghost" className="text-luxury-blue hover:text-luxury-gold p-0">
+                <Button variant="ghost" className="text-luxury-green hover:text-luxury-gold p-0">
                   Learn More →
                 </Button>
               </CardContent>

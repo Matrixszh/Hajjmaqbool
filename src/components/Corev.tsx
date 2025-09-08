@@ -70,7 +70,7 @@ const CoreValues = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium text-gray-800 mb-6">
-            Our Core <span className="italic font-light text-blue-400">Values</span>
+            Our Core <span className="italic font-light text-green-400">Values</span>
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
             These fundamental principles guide our actions, shape our culture, and define who we are as an organization. 
@@ -81,9 +81,9 @@ const CoreValues = () => {
         {/* Values Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value) => (
-            <div key={value.id} className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-100">
+            <div key={value.id} className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-100">
               {/* Icon */}
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
                 {value.icon}
               </div>
               

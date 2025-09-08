@@ -62,10 +62,10 @@ const About = () => {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
-              View Our <span className="italic font-light text-blue-400">brilliant</span> Crew
+              View Our <span className="italic font-light text-green-400">brilliant</span> Crew
             </h2>
             <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-              I have worked on multiple projects throughout my <span className="italic text-blue-400">career</span> and have achieved clients that are always satisfied. These are some of my most decorated <span className="italic text-blue-400">projects</span>
+              I have worked on multiple projects throughout my <span className="italic text-green-400">career</span> and have achieved clients that are always satisfied. These are some of my most decorated <span className="italic text-green-400">projects</span>
             </p>
           </div>
 
@@ -93,7 +93,7 @@ const About = () => {
                   />
                   {/* Hover overlay */}
                   <motion.div
-                    className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 bg-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                   />
@@ -108,14 +108,14 @@ const About = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h3
-                    className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300"
+                    className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300"
                     whileHover={{ x: 10 }}
                     transition={{ duration: 0.2 }}
                   >
                     Name of the Person
                   </motion.h3>
                   <motion.p
-                    className="text-blue-400 italic text-lg mb-6"
+                    className="text-green-400 italic text-lg mb-6"
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2, delay: 0.1 }}
                   >

@@ -7,7 +7,7 @@ const MissionVision = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium text-white mb-6">
-            Our <span className="italic font-light text-blue-400">Vision</span> & <span className="italic font-light text-blue-400">Mission</span>
+            Our <span className="italic font-light text-green-400">Vision</span> & <span className="italic font-light text-green-400">Mission</span>
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
             Guided by our vision for the future and driven by our mission to excel, we build more than structures – we create lasting legacies.
@@ -19,14 +19,14 @@ const MissionVision = () => {
           {/* Vision Card */}
           <div className="bg-gray-700 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                 </svg>
               </div>
               <h3 className="text-4xl font-medium text-white mb-4">Our Vision</h3>
-              <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
+              <div className="w-24 h-1 bg-green-400 mx-auto"></div>
             </div>
             
             <div className="max-w-4xl mx-auto">
@@ -50,13 +50,13 @@ const MissionVision = () => {
           {/* Mission Card */}
           <div className="bg-gray-700 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
               <h3 className="text-4xl font-medium text-white mb-4">Our Mission</h3>
-              <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
+              <div className="w-24 h-1 bg-green-400 mx-auto"></div>
             </div>
             
             <div className="max-w-4xl mx-auto">

@@ -98,10 +98,10 @@ const ExpandableProjectsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium text-black mb-6">
-            Where We<span className="italic font-light text-blue-400"> Excel</span>
+            Where We<span className="italic font-light text-green-400"> Excel</span>
           </h2>
           <p className="text-gray-800 max-w-3xl mx-auto text-lg leading-relaxed">
-            We deliver quality construction <span className="italic text-blue-400"> solutions</span> across residential, commercial, and infrastructure <span className="italic text-blue-400">projects</span>
+            We deliver quality construction <span className="italic text-green-400"> solutions</span> across residential, commercial, and infrastructure <span className="italic text-green-400">projects</span>
           </p>
         </div>
 
@@ -190,7 +190,7 @@ const ExpandableProjectsSection = () => {
                           initial={{ y: 10, opacity: 0 }}
                           animate={{ y: 0, opacity: 1 }}
                           transition={{ duration: 0.3, delay: 0.3 }}
-                          className="text-blue-400 text-sm mb-3"
+                          className="text-green-400 text-sm mb-3"
                         >
                           {project.category}
                         </motion.p>
@@ -211,19 +211,19 @@ const ExpandableProjectsSection = () => {
                           className="grid grid-cols-1 gap-2 text-xs"
                         >
                           <div className="flex justify-between">
-                            <span className="text-blue-400 font-semibold">Area:</span>
+                            <span className="text-green-400 font-semibold">Area:</span>
                             <span className="text-black">{project.details.area}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-blue-400 font-semibold">Location:</span>
+                            <span className="text-green-400 font-semibold">Location:</span>
                             <span className="text-black">{project.details.location}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-blue-400 font-semibold">Completed:</span>
+                            <span className="text-green-400 font-semibold">Completed:</span>
                             <span className="text-black">{project.details.completion}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-blue-400 font-semibold">Client:</span>
+                            <span className="text-green-400 font-semibold">Client:</span>
                             <span className="text-black">{project.details.client}</span>
                           </div>
                         </motion.div>

@@ -21,7 +21,7 @@ const DirectorsMessage = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400 shadow-2xl">
+              <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-green-400 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                   alt="Ather Ahmed - Managing Director"
@@ -39,7 +39,7 @@ const DirectorsMessage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <h2 className="text-3xl font-bold text-white mb-2">Ather Ahmed</h2>
-              <p className="text-blue-400 text-lg font-medium">Managing Director</p>
+              <p className="text-green-400 text-lg font-medium">Managing Director</p>
               <p className="text-gray-400 mt-2">Amana Constructions Pvt. Ltd.</p>
             </motion.div>
 
@@ -71,9 +71,9 @@ const DirectorsMessage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <div className="text-blue-400 text-6xl font-serif mb-4">"</div>
+              <div className="text-green-400 text-6xl font-serif mb-4">"</div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-2">
-                Director's <span className="text-blue-400">Message</span>
+                Director's <span className="text-green-400">Message</span>
               </h1>
             </motion.div>
 
@@ -126,7 +126,7 @@ const DirectorsMessage = () => {
             >
               <Button 
                 size="lg"
-                className="bg-blue-400 text-black hover:bg-blue-300 rounded-full px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="bg-green-400 text-black hover:bg-green-300 rounded-full px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Learn More About Our Vision
               </Button>

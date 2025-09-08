@@ -101,7 +101,7 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Contact <span className="italic font-light text-blue-400">Information</span>
+              Contact <span className="italic font-light text-green-400">Information</span>
             </h2>
             <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
               Get in touch with us through any of the following ways. We're here to help make your dream project a reality.
@@ -112,7 +112,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Location */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -129,32 +129,32 @@ const Contact = () => {
 
             {/* Contact Details */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Contact Details</h3>
               <div className="text-gray-300 text-sm space-y-2">
-                <p><span className="text-blue-400">Phone:</span> +91 98765 43210</p>
-                <p><span className="text-blue-400">Mobile:</span> +91 87654 32109</p>
-                <p><span className="text-blue-400">Email:</span> info@amanaconstruction.com</p>
-                <p><span className="text-blue-400">Website:</span> www.amanaconstruction.com</p>
+                <p><span className="text-green-400">Phone:</span> +91 98765 43210</p>
+                <p><span className="text-green-400">Mobile:</span> +91 87654 32109</p>
+                <p><span className="text-green-400">Email:</span> info@amanaconstruction.com</p>
+                <p><span className="text-green-400">Website:</span> www.amanaconstruction.com</p>
               </div>
             </div>
 
             {/* Office Timings */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Office Timings</h3>
               <div className="text-gray-300 text-sm space-y-2">
-                <p><span className="text-blue-400">Monday - Friday:</span><br />9:00 AM - 6:00 PM</p>
-                <p><span className="text-blue-400">Saturday:</span><br />9:00 AM - 4:00 PM</p>
-                <p><span className="text-blue-400">Sunday:</span><br />Closed</p>
+                <p><span className="text-green-400">Monday - Friday:</span><br />9:00 AM - 6:00 PM</p>
+                <p><span className="text-green-400">Saturday:</span><br />9:00 AM - 4:00 PM</p>
+                <p><span className="text-green-400">Sunday:</span><br />Closed</p>
                 <p className="text-xs text-gray-400 mt-3">*Site visits by appointment only</p>
               </div>
             </div>
@@ -167,7 +167,7 @@ const Contact = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">
-              Send us a <span className="italic font-light text-blue-400">Message</span>
+              Send us a <span className="italic font-light text-green-400">Message</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
               Have a project in mind? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
@@ -199,7 +199,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Full Name" 
                     required
-                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-blue-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4"
+                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4"
                   />
                 </div>
                 <div>
@@ -210,7 +210,7 @@ const Contact = () => {
                     placeholder="Phone Number" 
                     type="tel"
                     required
-                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-blue-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4"
+                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4"
                   />
                 </div>
                 <div>
@@ -221,7 +221,7 @@ const Contact = () => {
                     placeholder="Email Address" 
                     type="email"
                     required
-                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-blue-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4"
+                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4"
                   />
                 </div>
                 <div>
@@ -232,14 +232,14 @@ const Contact = () => {
                     placeholder="Project Description / Message" 
                     rows={5}
                     required
-                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-blue-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4 resize-none"
+                    className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4 resize-none"
                   />
                 </div>
                 <div className="text-center pt-4">
                   <Button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-12 py-3 rounded-full shadow-lg transform transition hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-12 py-3 rounded-full shadow-lg transform transition hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center">
@@ -264,7 +264,7 @@ const Contact = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 text-center">
           <p className="text-4xl text-gray-800 max-w-4xl mx-auto leading-relaxed">
-            Every <span className="text-blue-400 italic">brick</span> we lay tells a story — of trust, vision, and a future <span className="text-blue-400 italic">built</span> to last.
+            Every <span className="text-green-400 italic">brick</span> we lay tells a story — of trust, vision, and a future <span className="text-green-400 italic">built</span> to last.
           </p>
         </div>
       </section>

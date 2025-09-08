@@ -6,7 +6,7 @@ const ContactCTA = () => {
     <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl  font-medium mb-6">
-          Contact Us For To Start Your <em className="italic text-text-4xl font-light text-blue-400 mb-6">Dream</em>
+          Contact Us For To Start Your <em className="italic text-text-4xl font-light text-green-400 mb-6">Dream</em>
         </h2>
         <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
           In order to provide you the best service and features we want to asset 

@@ -43,7 +43,7 @@ const TestimonialSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium mb-6">
-            Outcomes That Need No <em className="italic font-light text-blue-400">Introduction</em>
+            Outcomes That Need No <em className="italic font-light text-green-400">Introduction</em>
           </h2>
           <p className="text-lg text-white/80 max-w-4xl mx-auto leading-relaxed">
             With 20 years in real estate and car rentals, I'm proud to have teamed up 
