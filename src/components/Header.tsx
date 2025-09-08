@@ -21,8 +21,8 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'FAQs', href: '/about' },
+    { name: 'Blogs', href: '/projects' },
     { name: 'Mission', href: '/mission' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-600 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out"
+                  className="text-gray-600 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out"
                 >
                   {link.name}
                 </a>
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-400 hover:bg-gray-100    "
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-green-400 hover:bg-gray-100    "
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-600 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out"
+              className="text-gray-600 hover:text-green-400 block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
