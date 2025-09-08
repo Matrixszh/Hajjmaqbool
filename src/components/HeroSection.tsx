@@ -32,7 +32,7 @@ const HeroSection = () => {
   variant="outline"
   className="bg-white/30 border-white text-white hover:bg-white hover:text-luxury-darker  text-lg rounded-xl"
 >
-  Contact Us
+  Register Now
 </Button>
 </Link>
         </div>
