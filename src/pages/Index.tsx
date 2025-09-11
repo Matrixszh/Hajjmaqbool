@@ -14,6 +14,7 @@ import LoadingAnimation from "@/components/LoadingAnimation";
 import EP2 from "@/components/EP2";
 import Header1 from "@/components/Header";
 import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
+import Faqs from "@/components/Faqs";
 
 const Index = () => {
 
@@ -25,13 +26,10 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ExpandableProjectsSection />
-      <EP2 />
-      <TeamSection />
-      <BrandTagline />
-      <TestimonialSection />
       <ParallaxZoomGallery />
-      <ContactCTA />
+      <TeamSection />      
       <BrandTagline />
+      <Faqs />
       <Footer />
     </div>
   );

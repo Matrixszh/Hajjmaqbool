@@ -6,7 +6,7 @@ const TeamSection = () => {
 
 
   return (
-    <section id="team" className="py-20 bg-gray-900">
+    <section id="team" className="py-20 bg-gradient-to-b from-emerald-950 to-black">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-0 items-stretch">
           {/* Left side - Architectural Image */}
@@ -19,17 +19,17 @@ const TeamSection = () => {
           </div>
           
           {/* Right side - Content */}
-          <div className="bg-gray-900 p-12 flex flex-col justify-center">
+          <div className=" p-12 flex flex-col justify-center">
             <h2 className="text-4xl font-medium text-white mb-4">
-              Can't get <span className="italic font-light">enough</span> and want the full tour?
+              If you hold a second  <span className="italic font-light">passport</span> you may also explore the Pakistani Route for Hajj.
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              View all of our past work here
+               Working with a reputable travel agent who specializes in dual nationals may help
             </p>
             <div className="flex flex-justify">
               <Link to="/contact">
-              <button className="text-sm px-[3] bg-gradient-to-r from-[#081E43] to-black border-black border-2 text-white hover:bg-none hover:bg-none rounded-full hover:text-white hover:border-white   px-8 py-3 text-lg transition-all duration-300 ease-in-out">
-                Get In Touch 
+              <button className="text-sm px-[3] bg-gradient-to-b from-emerald-600 to-black border-white border-2 text-white hover:bg-none hover:bg-none rounded-full hover:text-green-400 hover:border-green-400   px-8 py-3 text-lg transition-all duration-300 ease-in-out">
+                Register Now 
                 
               </button>
               </Link>

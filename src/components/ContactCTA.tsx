@@ -9,9 +9,8 @@ const ContactCTA = () => {
           Contact Us For To Start Your <em className="italic text-text-4xl font-light text-green-400 mb-6">Dream</em>
         </h2>
         <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-          In order to provide you the best service and features we want to asset 
-          all your requirements and help you a helping plan that accommodate your 
-          entire living environment and lifestyle.
+           If you hold a second passport (like Pakistani), you may also explore the Pakistani Route for Hajj. Working with a reputable travel agent who specializes in dual nationals can ease the process.
+
         </p>
         <Link to="/contact">
         <Button 
