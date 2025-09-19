@@ -16,7 +16,7 @@ import Header1 from "@/components/Header";
 import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
 import MissionVision from "@/components/Mission";
 import CoreValues from "@/components/Corev";
-
+import Waves from "@/components/GradBlur";
 const MV = () => {
 
 
@@ -25,11 +25,26 @@ const MV = () => {
     <div className="min-h-screen">
       <Header1/>
       <HeroSection />
+                  <Waves
+  lineColor="#fff"
+  backgroundColor=""
+  waveSpeedX={0.02}
+  waveSpeedY={0.01}
+  waveAmpX={40}
+  waveAmpY={20}
+  friction={0.9}
+  tension={0.01}
+  maxCursorMove={120}
+  xGap={12}
+  yGap={36}
+/>
       <MissionVision />
       <BrandTagline />
       <CoreValues/>
       <Footer />
+      
     </div>
+    
   );
 };
 
