@@ -16,6 +16,7 @@ import Header1 from "@/components/Header";
 import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
 import Faqs from "@/components/Faqs";
 import Waves from "@/components/GradBlur";
+import { HeroParallaxDemo } from "@/components/Comet-card";
 
 const Index = () => {
 
@@ -41,6 +42,7 @@ const Index = () => {
       <AboutSection />
       <ExpandableProjectsSection />
       <ParallaxZoomGallery />
+      <HeroParallaxDemo/>
       <TeamSection />      
       <BrandTagline />
       <Faqs />
