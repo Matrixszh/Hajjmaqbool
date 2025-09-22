@@ -15,6 +15,7 @@ import EP2 from "@/components/EP2";
 import Header1 from "@/components/Header";
 import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
 import Faqs from "@/components/Faqs";
+import Waves from "@/components/GradBlur";
 
 const Index = () => {
 
@@ -24,6 +25,19 @@ const Index = () => {
     <div className="min-h-screen">
       <Header1/>
       <HeroSection />
+      <Waves
+  lineColor="#6a6767"
+  backgroundColor=""
+  waveSpeedX={0.02}
+  waveSpeedY={0.01}
+  waveAmpX={40}
+  waveAmpY={20}
+  friction={0.9}
+  tension={0.01}
+  maxCursorMove={120}
+  xGap={12}
+  yGap={36}
+/>
       <AboutSection />
       <ExpandableProjectsSection />
       <ParallaxZoomGallery />

@@ -26,7 +26,7 @@ const MV = () => {
       <Header1/>
       <HeroSection />
                   <Waves
-  lineColor="#fff"
+  lineColor="#6a6767"
   backgroundColor=""
   waveSpeedX={0.02}
   waveSpeedY={0.01}

@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import emailjs from '@emailjs/browser';
 import { Link } from "react-router-dom";
-
+import Waves from "@/components/GradBlur";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -76,7 +76,7 @@ const Contact = () => {
       
       {/* Hero Section */}
       <section
-        className="relative h-screen flex items-center justify-center"
+        className="relative h-[80vh] flex items-center justify-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop')`
         }}
@@ -94,7 +94,19 @@ const Contact = () => {
           </p>
         </div>
       </section>
-
+      <Waves
+  lineColor="#6a6767"
+  backgroundColor=""
+  waveSpeedX={0.02}
+  waveSpeedY={0.01}
+  waveAmpX={40}
+  waveAmpY={20}
+  friction={0.9}
+  tension={0.01}
+  maxCursorMove={120}
+  xGap={12}
+  yGap={36}
+/>
       {/* Contact Information Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-6 max-w-6xl">
