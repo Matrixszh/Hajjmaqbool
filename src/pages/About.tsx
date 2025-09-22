@@ -15,8 +15,9 @@ import EP2 from "@/components/EP2";
 import Header1 from "@/components/Header";
 import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
 import Faqs2 from "@/components/Faqs2";
-import AskAdditionalQuestions from "@/components/AskAdditionalQuestions";
+import { ExpandableCardDemo } from "@/components/Expandcard";
 
+import Waves from "@/components/GradBlur";
 const About = () => {
 
 
@@ -25,12 +26,24 @@ const About = () => {
     <div className="min-h-screen">
       <Header1/>
       <HeroSection2 />
+            <Waves
+  lineColor="#6a6767"
+  backgroundColor=""
+  waveSpeedX={0.02}
+  waveSpeedY={0.01}
+  waveAmpX={40}
+  waveAmpY={20}
+  friction={0.9}
+  tension={0.01}
+  maxCursorMove={120}
+  xGap={12}
+  yGap={36}
+/>
       <Policy2 />
       <Faqs2 />
       <ParallaxZoomGallery />
-      <TeamSection />      
-      <AskAdditionalQuestions />
-      <Faqs2 />
+      <TeamSection /> 
+      <BrandTagline/>  
       <Footer />
     </div>
   );
