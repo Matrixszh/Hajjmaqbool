@@ -16,7 +16,6 @@ import Header1 from "@/components/Header";
 import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
 import Faqs2 from "@/components/Faqs2";
 import { ExpandableCardDemo } from "@/components/Expandcard";
-
 import Waves from "@/components/GradBlur";
 const About = () => {
 

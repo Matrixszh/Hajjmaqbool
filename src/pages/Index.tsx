@@ -42,7 +42,6 @@ const Index = () => {
       <AboutSection />
       <ExpandableProjectsSection />
       <ParallaxZoomGallery />
-      <HeroParallaxDemo/>
       <TeamSection />      
       <BrandTagline />
       <Faqs />
