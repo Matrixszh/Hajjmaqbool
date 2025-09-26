@@ -23,37 +23,37 @@ export default function ParallaxZoomGallery() {
 
   const pictures: Picture[] = [
     {
-      src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop',
+      src: '/hajj1.jpg',
       scale: scale4,
       className: 'w-[25vw] h-[25vh]'
     },
     {
-      src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop',
+      src: '/hajj2.jpg',
       scale: scale5,
       className: 'w-[35vw] h-[30vh] -top-[30vh] left-[5vw]'
     },
     {
-      src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop',
+      src: '/hajj3.jpg',
       scale: scale6,
       className: 'w-[20vw] h-[45vh] -top-[10vh] -left-[25vw]'
     },
     {
-      src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop',
+      src: '/hajj231.jpg',
       scale: scale5,
       className: 'w-[25vw] h-[25vh] left-[27.5vw]'
     },
     {
-      src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop',
+      src: '/hajj221.jpg',
       scale: scale6,
       className: 'w-[20vw] h-[25vh] top-[27.5vh] left-[5vw]'
     },
     {
-      src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop',
+      src: '/hajj253.jpg',
       scale: scale8,
       className: 'w-[30vw] h-[25vh] top-[27.5vh] -left-[22.5vw]'
     },
     {
-      src: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop',
+      src: '/hajj241.jpg',
       scale: scale9,
       className: 'w-[15vw] h-[15vh] top-[22.5vh] left-[25vw]'
     }

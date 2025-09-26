@@ -12,9 +12,9 @@ const TeamSection = () => {
           {/* Left side - Architectural Image */}
           <div className="relative">
             <img 
-              src="/hero-image.jpg"
+              src="/hajj2.jpg"
               alt="Architectural ceiling structure"
-              className="w-full h-full object-cover min-h-[400px]"
+              className="w-full h-[50vh] object-cover min-h-[400px]"
             />
           </div>
           
