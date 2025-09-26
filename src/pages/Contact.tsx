@@ -108,7 +108,7 @@ const Contact = () => {
   yGap={36}
 />
       {/* Contact Information Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-gradient-to-b from-emerald-950 to-black">
         <div className="container mx-auto px-6 max-w-6xl">
           {/* Header */}
           <div className="text-center mb-16">

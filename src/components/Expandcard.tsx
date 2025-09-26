@@ -44,7 +44,7 @@ export function ExpandableCardDemo() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -68,7 +68,7 @@ export function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-gradient-to-b from-emerald-950 to-black sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -124,7 +124,7 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4">
+      <ul className="max-w-7xl mx-auto w-full gap-4">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -205,11 +205,11 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Subtext number 1",
+    title: "Why It Is Better to Go Through Travel Agents Than Use Nusuk Directly",
+    src: "hajj2.jpg",
+    ctaText: "Show",
+    ctaLink: "",
     content: () => {
       return (
         <p>
@@ -229,10 +229,10 @@ const cards = [
   },
   {
     description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    title: "Why It Is Better to Go Through Travel Agents Than Use Nusuk Directly",
+    src: "/hajj1.jpg",
+    ctaText: "Show",
+    ctaLink: "",
     content: () => {
       return (
         <p>
@@ -252,10 +252,10 @@ const cards = [
 
   {
     description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    title: "Why It Is Better to Go Through Travel Agents Than Use Nusuk Directly",
+    src: "/hajj3.jpg",
+    ctaText: "Show",
+    ctaLink: "",
     content: () => {
       return (
         <p>
@@ -275,9 +275,9 @@ const cards = [
   {
     description: "Led Zeppelin",
     title: "Stairway To Heaven",
-    src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    src: "/hajj221.jpg",
+    ctaText: "Show",
+    ctaLink: "",
     content: () => {
       return (
         <p>
@@ -296,9 +296,9 @@ const cards = [
   {
     description: "Mustafa Zahid",
     title: "Toh Phir Aao",
-    src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    src: "/hajj231.jpg",
+    ctaText: "Show",
+    ctaLink: "",
     content: () => {
       return (
         <p>
