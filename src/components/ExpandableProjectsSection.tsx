@@ -27,8 +27,8 @@ const ExpandableProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Registration Opens",
-      category: "July 30 2025",
+      title: "Package Announcements",
+      category: "January 2026",
       description:
         "Registration Opened July 30 2025, please see Comprehensive Registration Tutorial",
       icon: CalendarDays,
@@ -83,8 +83,8 @@ const ExpandableProjectsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium text-white mb-6">
-           Hajj Application{" "}
-            <span className="italic font-light text-green-400">Timeline</span>
+           How To Apply For{" "}
+            <span className="italic font-light text-green-400">Hajj</span>
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
              Only use the{" "}

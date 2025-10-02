@@ -7,13 +7,20 @@ const AboutSection = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Top paragraph section */}
         <div className="mb-16">
-          <p className="text-3xl text-gray-800 leading-relaxed text-justify max-w-5xl">
-            If you are a U.S. passport holder looking to perform Hajj in 2026{" "}
-            <span className="text-gray-500">it’s essential to understand that the</span>{" "}
-            <span className="italic">only official and secure method</span>{" "}
-            <span className="text-gray-500"> to apply is through the </span>{" "}
-            <span className="font-medium text-gray-800">Nusuk Hajj Portal — not the mobile app.</span>
-          </p>
+<p className="text-3xl text-gray-800 leading-relaxed text-justify max-w-5xl">
+  The Nusuk Hajj Assistance Committee is a
+  <span className="text-gray-500"> dedicated non-profit organization</span>
+  {" "}committed to supporting and guiding pilgrims throughout their Hajj journey within the Nusuk system.
+  <span className="italic">
+    {" "}Our mission is to provide clear, accurate, and timely assistance{" "}
+  </span>
+  to those embarking on this sacred pilgrimage,
+  <span className="font-medium text-gray-800">
+    {" "}ensuring a smooth and spiritually fulfilling experience.
+  </span>
+</p>
+
+
         </div>
 
         {/* Main content section */}
@@ -24,14 +31,17 @@ const AboutSection = () => {
           {/* Right side - Content */}
           <div className="pt-8">
             <h2 className="text-4xl font-medium text-gray-800 mb-2">
-              Why Chose Us
+             About Us
             </h2>
             <p className="text-xl italic text-green-400 mb-8">
-              Hajjaatul Islam
+              Nusuk Hajj Assistance Committee
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8 text-justify">
-              From 2019s pre‑COVID period with roughly 20,000 U.S. pilgrims traveling via traditional agencies, through the 2020–2021 suspension for U.S. pilgrims, to 2022s Motawif rollout (~3,500 U.S. pilgrims, no U.S. firms on the ground), 2023s Nusuk 1.0 (40,000+ U.S. applicants, ~4,000 completed Hajj, simultaneous payment+package selection under Saudi logistics with one U.S. agency coordination), 2024s Nusuk 2.0 (e‑wallet required before package selection, smoother yet still glitchy, ~8,000 U.S. pilgrims via multiple U.S. agencies with Saudi operators), and 2025s Nusuk 3.0 (notably improved stability, clearer timelines, ~5,000 U.S. pilgrims, and a separate high‑end Kidana Hajj tier via Dar El Salam adding ~1,200 Western quotas without drawing from countries main quotas), the trend shows a rapid transition from agency‑centric models to a centralized portal with iterative system enhancements but continued capacity constraints and evolving premium options.
+The Nusuk Hajj Assistance team comprises some of the most experienced professionals in the Hajj sector—individuals who have deep knowledge of the Nusuk platform, the Ministry of Hajj and Umrah, and the various authorized Saudi service providers involved in the Hajj process. With this strong network and first-hand expertise, we are uniquely positioned to address the challenges that pilgrims often encounter—from application issues and travel logistics to on-ground support in the Kingdom.
+We understand the complexities of the Nusuk system and the concerns that many pilgrims, especially those traveling from abroad, may have. Whether it's understanding eligibility, booking services, navigating the platform, or resolving unforeseen problems, we’re here to help at every step.
+Headquartered in Jeddah, Saudi Arabia, with a satellite office located in Dearborn, Michigan (USA), we serve as a reliable bridge between international pilgrims and the Saudi Hajj authorities. Our local presence in both regions allows us to provide personalized assistance before, during, and after the pilgrimage.
+At the Nusuk Hajj Assistance Committee, we are more than just an advisory body—we are a committed partner in your Hajj journey. Our goal is to ensure that every pilgrim receives the support, clarity, and peace of mind needed to focus on the spiritual essence of Hajj.
             </p>
              
             
@@ -42,7 +52,7 @@ const AboutSection = () => {
             <img
               src="/about.jpg"
               alt="Modern luxury house exterior"
-              className="w-full h-[83vh] rounded-lg shadow-lg"
+              className="w-full h-[110vh] rounded-lg shadow-lg"
             />
           </div>
         </div>

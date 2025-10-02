@@ -7,7 +7,7 @@ const AboutSection = () => {
       id: 1,
       title: "What challenges did pilgrims face when using the Nusuk platform directly?",
       subtitle: "The Shift to Nusuk",
-      description: "raditionally, local travel agents managed Hajj trips. With the launch of the Nusuk platform by the Saudi government, Saudi-based companies took direct control, intending to simplify the process. However, technical glitches, limited packages, and payment issues caused frustration.",
+      description: "Traditionally, local travel agents managed Hajj trips. With the launch of the Nusuk platform by the Saudi government, Saudi-based companies took direct control, intending to simplify the process. However, technical glitches, limited packages, and payment issues caused frustration.",
       image: "/hajj1.jpg"
     },
     {
