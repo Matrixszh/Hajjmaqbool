@@ -17,6 +17,7 @@ import ParallaxZoomGallery from "@/components/ParallaxZoomGallery";
 import Faqs from "@/components/Faqs";
 import Waves from "@/components/GradBlur";
 import { HeroParallaxDemo } from "@/components/Comet-card";
+import { ThreeDCardDemo } from "@/components/3Dcard";
 
 const Index = () => {
 
@@ -42,6 +43,7 @@ const Index = () => {
       <AboutSection />
       <ExpandableProjectsSection />
       <ParallaxZoomGallery />
+      <ThreeDCardDemo/>
       <TeamSection />      
       <BrandTagline />
       <Faqs />
