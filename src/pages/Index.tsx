@@ -18,13 +18,16 @@ import Faqs from "@/components/Faqs";
 import Waves from "@/components/GradBlur";
 import { HeroParallaxDemo } from "@/components/Comet-card";
 import { ThreeDCardDemo } from "@/components/3Dcard";
+import { StickyBannerDemo } from "@/components/Banner";
 
 const Index = () => {
 
 
 
   return (
+    
     <div className="min-h-screen">
+      <StickyBannerDemo/>
       <Header1/>
       <HeroSection />
       <Waves

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative mt-[10vh] h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative  mt-[10vh] h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -16,9 +16,9 @@ const HeroSection = () => {
       {/* Content */}
       <div className="lg:px-6  mx-6 text-center relative z-10">
         <h1 className="px-10 text-hero font-bold text-white mb-6 leading-tight">
-          FREQUENTLY ASKED 
+          NUSUK HAJJ ASISTANCE
           <br />
-          QUESTIONS
+          COMMITTE
         </h1>
         
         <p className="px-10 text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed lg:text-xl">

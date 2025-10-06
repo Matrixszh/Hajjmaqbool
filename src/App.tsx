@@ -10,12 +10,15 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects";
 import MV from "./pages/MV";
+import { StickyBannerDemo } from "./components/Banner";
 
 const queryClient = new QueryClient();
 
 const App = () => (
+  
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      
       <TooltipProvider>
         <Toaster />
         <Sonner />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/HeroSection3";
 import AboutSection from "@/components/AboutSection";
 import ExpandableProjectsSection from "@/components/ExpandableProjectsSection";
 import TeamSection from "@/components/TeamSection";

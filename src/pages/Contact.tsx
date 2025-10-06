@@ -76,7 +76,7 @@ const Contact = () => {
       
       {/* Hero Section */}
       <section
-        className="relative h-[80vh] flex items-center justify-center"
+        className="relative mt-[10vh] h-[80vh] flex items-center justify-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop')`
         }}

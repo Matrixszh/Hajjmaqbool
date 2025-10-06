@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative  h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -35,9 +35,26 @@ const HeroSection = () => {
   Register Now
 </Button>
 </Link>
+    
         </div>
+        <div className="mt-2 px-4">
+          <p className="text-white/70 text-sm uppercase tracking-wider mb-4">In collaboration with</p>
+          <div className="flex justify-center items-center gap-12">
+            <img
+              src="/logo.png"
+              alt="Collaborator 1 Logo"
+              className="h-8 lg:h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="/logo.png"
+              alt="Collaborator 2 Logo"
+              className="h-8 lg:h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
+            />
+          </div>
+          </div>
+    
       </div>
-
+    
 
     </section>
   );
