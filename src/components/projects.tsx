@@ -5,16 +5,16 @@ const AboutSection = () => {
   const projects = [
     {
       id: 1,
-      title: "What challenges did pilgrims face when using the Nusuk platform directly?",
-      subtitle: "The Shift to Nusuk",
-      description: "Traditionally, local travel agents managed Hajj trips. With the launch of the Nusuk platform by the Saudi government, Saudi-based companies took direct control, intending to simplify the process. However, technical glitches, limited packages, and payment issues caused frustration.",
+      title: "Can a travel agent help with your Hajj application?",
+      subtitle: "Travel Agents And Their Role",
+      description: "Here’s the truth: no travel agent can submit your application, create your Nusuk account, accept payment on your behalf, or issue or facilitate your Hajj visa. However, they can still be very helpful after your application is accepted. Some licensed travel agencies organize guided group packages, offer in-person prep sessions or webinars, help with packing lists, travel logistics, and on-the-ground coordination, and assist with language translation, emergency support, and group movement planning during the days of Hajj. These groups can greatly improve your comfort and clarity—especially for first-time pilgrims—but your entire application and payment must still go through Nusuk directly. Start preparing your passport, passport-sized photo, and travel details well in advance, ensuring your passport is valid at least six months beyond the expected Hajj date. Keep an eye out for package announcements and registration openings as early as March–April 2026. In summary, Hajj 2026 begins with you—your account, your application, and your intention. Use travel groups for support, not as a substitute for your own responsibility. May Allah grant you an accepted Hajj and ease throughout the process.",
       image: "/hajj1.jpg"
     },
     {
       id: 2,
-      title: "Why did Saudi companies reintroduce travel agents into the Hajj process?",
-      subtitle: "The Return of Travel Agents",
-      description: "Saudi companies struggled with logistics and eventually brought back experienced travel agents to guide and support pilgrims. Now, agents are paid by Saudi companies rather than directly by pilgrims.",
+      title: "Do Hajj packages cost more through a travel agent?",
+      subtitle: "Hajj Packages Cost",
+      description: "No — the price is the same whether you book your package directly through the Nusuk Hajj Portal or through a registered travel agent affiliated with a Nusuk Hajj Operator. All packages on the Nusuk platform are standardized and published by official Saudi-based operators, meaning prices are set by those operators and not inflated by travel agents. While the cost doesn’t change, booking through a travel agent can offer added benefits. Verified agents typically receive a commission from the Saudi operator for each package sold, giving them a strong incentive to support you since your satisfaction and successful Hajj reflect on their reputation. In return, good agents often provide personalized guidance before, during, and after the application process, organized group support through WhatsApp or Telegram updates, on-the-ground coordination with local guides, group leaders, and transportation help, as well as faster access to information when the Nusuk system experiences delays or confusion. The bottom line: you’ll pay the same price but may receive more personalized service and group support. If you’re confident navigating the Nusuk system yourself, direct booking is perfectly fine — but if you prefer experienced guidance and comfort during your journey, working with a trusted travel agent can enhance your overall Hajj experience at no additional cost.",
       image: "/hajj3.jpg"
     },
     {
@@ -48,7 +48,7 @@ const AboutSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-[50vh] rounded-lg shadow-lg"
+                    className="pt-[30vh] w-full h-[120vh] rounded-lg shadow-lg"
                   />
                 </div>
 
@@ -61,7 +61,7 @@ const AboutSection = () => {
                     {project.subtitle}
                   </p>
 
-                  <p className="text-gray-700 leading-relaxed mb-8 text-justify">
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8 text-justify">
                     {project.description}
                   </p>
                 </div>

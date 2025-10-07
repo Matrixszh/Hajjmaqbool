@@ -6,46 +6,21 @@ import { CardBody, CardContainer, CardItem  } from "@/components/ui/3d-card";
 // Card data array
 const cardData = [
   {
-    title: "Make things float in air",
-    description: "Hover over this card to unleash the power of CSS perspective",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    primaryButton: "Try now →",
-    secondaryButton: "Sign up"
+    title: "Submission",
+    description: "•	Submitting your Hajj application",
+    image: "/submit.jpg",
   },
   {
-    title: "Interactive 3D Effects",
-    description: "Experience smooth animations and perspective transformations",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    primaryButton: "Explore →",
-    secondaryButton: "Learn More"
+    title: "Payment",
+    description: "•	Selecting and paying for your Hajj package",
+    image: "/payment.jpg",
+
+
   },
   {
-    title: "Modern UI Components",
-    description: "Beautiful and responsive card components for your next project",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    primaryButton: "Get Started →",
-    secondaryButton: "Download"
-  },
-  {
-    title: "Responsive Design",
-    description: "Perfectly adapted for all screen sizes and devices",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    primaryButton: "View Demo →",
-    secondaryButton: "Contact Us"
-  },
-  {
-    title: "CSS Perspective Magic",
-    description: "Advanced CSS transforms that bring your interfaces to life",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    primaryButton: "Discover →",
-    secondaryButton: "Book Demo"
-  },
-  {
-    title: "Next.js Integration",
-    description: "Seamlessly integrate with your Next.js and React applications",
-    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    primaryButton: "Install →",
-    secondaryButton: "Documentation"
+    title: "Receiving",
+    description: "•	Receiving your Hajj visa",
+    image: "/aproved.jpg",
   }
 ];
 
@@ -54,14 +29,10 @@ function SingleCard({
   title, 
   description, 
   image, 
-  primaryButton, 
-  secondaryButton 
 }: {
   title: string;
   description: string;
   image: string;
-  primaryButton: string;
-  secondaryButton: string;
 }) {
   return (
     <CardContainer 
@@ -92,20 +63,8 @@ function SingleCard({
           />
         </CardItem>
         <div className="flex justify-between items-center mt-6">
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-gray-200 dark:border-gray-700"
-          >
-            {primaryButton}
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-green text-white text-xs font-bold hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-          >
-            {secondaryButton}
-          </CardItem>
+          
+
         </div>
       </CardBody>
     </CardContainer>
@@ -123,9 +82,9 @@ export function ThreeDCardDemo() {
             <span className="italic font-light text-green-400">Hajj</span>
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-             Only use the{" "}
-            <span className="italic text-green-400">official Nusuk portal</span> for registration and payment. Any other route risks your Hajj and your{" "}
-            <span className="italic text-green-400"> personal safety</span>
+             Applications cannot be submitted {" "}
+            <span className="italic text-green-400">by travel agents</span> family members, or any third party. Every pilgrim must create and complete {" "}
+            <span className="italic text-green-400"> their own account.</span>
           </p>
     </div>
 
@@ -139,8 +98,6 @@ export function ThreeDCardDemo() {
                 title={card.title}
                 description={card.description}
                 image={card.image}
-                primaryButton={card.primaryButton}
-                secondaryButton={card.secondaryButton}
               />
             </div>
           ))}

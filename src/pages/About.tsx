@@ -18,6 +18,7 @@ import Faqs2 from "@/components/Faqs2";
 import { ExpandableCardDemo } from "@/components/Expandcard";
 import Waves from "@/components/GradBlur";
 import Faqs from "@/components/Faqs2";
+import { motion } from "framer-motion";
 const About = () => {
 
 
@@ -39,8 +40,130 @@ const About = () => {
               xGap={12}
               yGap={36}
             />
+             
+
       <Policy2 />
       <Faqs/>
+      <section className="py-20 bg-gradient-to-t from-emerald-950 to-black">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-medium text-white mb-6">
+              Agencies We <span className="italic font-light text-green-400">Collaborate</span> With
+            </h2>
+            <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+              Our experienced leadership team brings together decades of construction expertise, engineering excellence, and proven project management skills to deliver exceptional results for our clients.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {[
+              {
+                name: "Ather Ahmed",
+                position: "Managing Director & CEO",
+                image: "/322615dd-9756-4f76-bc63-8df394541271.JPG",
+                description: "With 32 years of construction experience and 22 years of international expertise, Ather Ahmed leads Amana Constructions with a vision for engineering excellence and innovation. His extensive background includes managing mega-projects and scaling companies from startup to industry leaders."
+              },
+              {
+                name: "Akhter Ahmed",
+                position: "Director",
+                image: "/akhter.jpg",
+                description: "Akhter Ahmed contributes extensive experience in project management and construction operations. His expertise in coordinating complex construction projects ensures timely delivery and maintains the highest standards of quality and safety across all Amana projects."
+              },
+              {
+                name: "Mohammed Zaker",
+                position: "Director",
+                image: "/zaker.jpg",
+                description: "Mohammed Zaker provides valuable insights in construction planning and execution. His technical knowledge and attention to detail help ensure that every Amana project meets the highest engineering standards and exceeds client expectations."
+              },
+              {
+                name: "Iftekhar Ahmed",
+                position: "Director",
+                image: "/IMG_4120.jpg",
+                description: "Iftekhar Ahmed brings strategic leadership and operational expertise to Amana Constructions. His focus on quality assurance and client satisfaction has been instrumental in building the company's reputation for delivering exceptional construction projects."
+              },
+              {
+                name: "Mohammed Zaidan Ahmed",
+                position: "Project Manager",
+                image: "/zaidan.jpg",
+                description: "Mohammed Zaidan Ahmed brings strategic leadership and operational expertise to Amana Constructions. His focus on quality assurance and client satisfaction has been instrumental in building the company's reputation for delivering exceptional construction projects."
+              },
+              {
+                name: "Mohammed Ziyan Ahmed",
+                position: "Project Manager",
+                image: "/IMG_7459.JPG",
+                description: "Mohammed Ziyan Ahmed contributes extensive experience in project management and construction operations. His expertise in coordinating complex construction projects ensures timely delivery and maintains the highest standards of quality and safety across all Amana projects."
+              },
+              {
+                name: "Mohammed Zamaan Ahmed",
+                position: "Project Manager",
+                image: "/zaman.jpg",
+                description: "Mohammed Zamaan Ahmed provides valuable insights in construction planning and execution. His technical knowledge and attention to detail help ensure that every Amana project meets the highest engineering standards and exceeds client expectations."
+              }
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col md:flex-row gap-8 items-start group cursor-pointer"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -5 }}
+                viewport={{ once: true }}
+              >
+                {/* Profile Image */}
+                <motion.div
+                  className="flex-shrink-0 relative overflow-hidden rounded-lg"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-48 h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                  />
+                  {/* Hover overlay */}
+                  <motion.div
+                    className="absolute inset-0 bg-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                  />
+                </motion.div>
+
+                {/* Content */}
+                <motion.div
+                  className="flex-1"
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.h3
+                    className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300"
+                    whileHover={{ x: 10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {member.name}
+                  </motion.h3>
+                  <motion.p
+                    className="text-green-400 italic text-lg mb-6"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2, delay: 0.1 }}
+                  >
+                    {member.position}
+                  </motion.p>
+
+                  <motion.p
+                    className="text-gray-300 leading-relaxed text-base group-hover:text-gray-200 transition-colors duration-300"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2, delay: 0.2 }}
+                  >
+                    {member.description}
+                  </motion.p>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       <ParallaxZoomGallery />
       <BrandTagline/>  
       <Footer />

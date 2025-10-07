@@ -27,51 +27,33 @@ const ExpandableProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Package Announcements",
-      category: "January 2026",
+      title: "Arrival in Saudi Arabia",
+      category: "May 17 – May 21, 2026",
       description:
-        "Registration Opened July 30 2025, please see Comprehensive Registration Tutorial",
+        "•	Most standard packages will have arrivals during this window.Some budget packages may arrive earlier to accommodate longer stays or cost-saving logistics.Premium or express packages may arrive slightly later, especially those designed for shorter 10-day experiences",
       icon: CalendarDays,
       iconClass: "text-green-400",
       iconStroke: 1.75,
     },
     {
       id: 2,
-      title: "Information Verification",
-      category: "After registration",
-      description: "Begins sometime after registration",
+      title: "Core Days of Hajj (Manasik)",
+      category: "May 25 – May 29/30, 2026",
+      description: "These are the sacred days of the pilgrimage, including:8th Dhul Hijjah (May 25) – Arrival at Mina9th Dhul Hijjah (May 26) – Day of Arafah (most important day of Hajj)10th Dhul Hijjah (May 27) – Eid Al-Adha, Tawaf, and Rami (stoning)11th–13th Dhul Hijjah (May 28–30) – Continued stoning of the Jamarat and other rites",
       icon: ShieldCheck,
       iconClass: "text-green-400",
       iconStroke: 1.75,
     },
     {
       id: 3,
-      title: "E-Wallet Payment",
-      category: "After Verification",
-      description: "E-Wallet Payment Window Opens once verification is complete",
+      title: "Departure / Return Home",
+      category: "Earliest Departures Begin: May 30, 2026",
+      description: "Most pilgrims will begin returning home after completing Tawaf al-Wada (Farewell Tawaf), which typically occurs between May 30 – June 2, depending on their package and flight availability.Some longer-duration packages may return even later if they include extended stays in Medinah or other cities.",
       icon: Wallet,
       iconClass: "text-green-400",
       iconStroke: 1.75,
     },
-    {
-      id: 4,
-      title: "Package Release",
-      category: "Feb 9",
-      description: "Package Releases TBD, opened on Feb 9 FOR 2025",
-      icon: Package,
-      iconClass: "text-green-400",
-      iconStroke: 1.75,
-    },
-    {
-      id: 5,
-      title: "Tickets",
-      category: "After Payment Confirmation",
-      description:
-        "Hajj Visa and Airline Tickets Issued: After payment confirmation",
-      icon: Ticket,
-      iconClass: "text-green-400",
-      iconStroke: 1.75,
-    },
+    
   ];
 
   return (
@@ -83,8 +65,8 @@ const ExpandableProjectsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-medium text-white mb-6">
-           How To Apply For{" "}
-            <span className="italic font-light text-green-400">Hajj</span>
+           Estimated Timeline for {" "}
+            <span className="italic font-light text-green-400">Hajj 2026</span>
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
              Only use the{" "}
@@ -94,7 +76,7 @@ const ExpandableProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 gap-6 max-w-10xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 max-w-10xl mx-auto">
           {projects.map((project, index) => {
             const Icon = project.icon;
             const size = project.iconSize ?? 48;
