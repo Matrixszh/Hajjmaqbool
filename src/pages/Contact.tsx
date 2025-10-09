@@ -47,7 +47,7 @@ const Contact = () => {
     if (passportFront) formDataToSend.append('passportFront', passportFront);
     if (passportBack) formDataToSend.append('passportBack', passportBack);
 
-    const res = await fetch('/api/send-email', {
+    const res = await fetch('/pages/api/send-email', {
       method: 'POST',
       body: formDataToSend,
     });
