@@ -47,10 +47,10 @@ const handleSubmit = async (e: React.FormEvent) => {
     if (passportBack) formDataToSend.append('passportBack', passportBack);
 
     // Ensure this hits your Vercel deployment
-    const res = await fetch('/api/send-email', {
-      method: 'POST',
-      body: formDataToSend,
-    });
+    const res = await fetch(`${window.location.origin}/api/send-email`, {
+  method: "POST",
+  body: formDataToSend,
+});
 
     if (res.ok) {
       setSubmitStatus('success');
