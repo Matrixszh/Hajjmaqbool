@@ -19,16 +19,32 @@ const AboutSection = () => {
     },
     {
       id: 3,
-      title: "What risks do pilgrims face if they book their Hajj packages directly through Nusuk?",
-      subtitle: "The Pitfalls of Booking Directly",
-      description: "Pilgrims booking directly through Nusuk are assigned to Saudi companies, but agents don’t get paid to look after them. This can leave direct-booking pilgrims without proper support or guidance.",
+      title: "What are the required vaccinations?",
+      subtitle: "Required Vaccinations",
+      description: "Certain vaccination requirements are in place for those planning to participate in Hajj or be within the Hajj areas, including adults and children aged one year or older. It is compulsory to possess a valid vaccination certificate showing that you have received the quadruple meningitis vaccine (ACYW) if you wish to attend Hajj or enter Hajj areas. This vaccine should have been administered at least ten days before your arrival in the Hajj areas. Acceptable vaccines include the Quadruple (ACYW) polysaccharide vaccine, which remains valid for up to three years after vaccination, and the Quadruple conjugate (ACYW) vaccine, which remains valid for up to five years after vaccination.",
       image: "/hajj253.jpg"
     },
     {
       id: 4,
-      title: "What are the key benefits of booking Hajj through a travel agent instead of directly through Nusuk?",
-      subtitle: "The Case for Agent-Led Bookings",
-      description: "Booking through an agent ensures dedicated guidance, personalized service, and accountability, as agents are motivated and compensated to look after pilgrims. This makes the journey smoother and less stressful.",
+      title: "How Long Does the Nusuk Verification Process Take?",
+      subtitle: "The Nusuk Verification Process",
+      description: "Once you submit your Hajj application through the Nusuk Hajj Portal, your account enters the “Under Verification” stage — a key step that can take anywhere from a few days to several weeks early in the registration period due to high volume and document checks, but often speeds up to 24–48 hours later on. U.S. Green Card holders or non-U.S. citizens may experience longer wait times because of additional screening. To avoid delays, ensure your passport, residency documents, and photo are valid, clear, and correctly uploaded, and that your personal details exactly match your identification. If your status remains under verification for some time, don’t worry — it means your application is still being reviewed. Check your Nusuk account regularly, as updates may appear without notifications, and stay informed through official channels, authorized travel agents, or trusted community groups. Once verified, you may gain instant access to book your package, so keep your preferred option and payment ready. May Allah make your verification smooth and accept your intention for Hajj.",
+      image: "/hajj221.jpg"
+    },
+    
+    {
+      id: 5,
+      title: "Do Travel Agents Still Play a Role in Hajj?",
+      subtitle: "Travel Agents Role in Hajj",
+      description: "Yes — but the role of travel agents in the Hajj process has changed significantly. With the introduction of the **Nusuk Hajj Portal**, traditional agent duties like handling applications, collecting payments, and issuing visas have been phased out. Today, U.S.-based travel agents must be affiliated with an approved **Nusuk Hajj Operator** in Saudi Arabia and typically serve as partners or subcontractors. While they can’t submit your application — every pilgrim must register personally through Nusuk — they can guide you through the process, help compare packages, explain inclusions like hotel locations and transportation, and assist with account setup or technical issues. Many also organize group orientations, manage communication channels, and provide on-ground support during the Days of Hajj. When choosing an agent, verify their affiliated **Nusuk Operator** and clarify what support they’ll provide. Trusted U.S. partners include **Manara Travel**, **Dar El Salaam Travel**, and **Adam Travel**. Remember, agents earn commissions from Saudi operators, so pricing may vary. Ultimately, you’re responsible for completing your registration, uploading documents, and making payments on time. Travel agents can guide and support — but not replace — your personal effort. May Allah ease your journey and accept your intention for Hajj.",
+      image: "/hajj3.jpg"
+    },
+    
+    {
+      id: 6,
+      title: "What is the history of NUSUK ?",
+      subtitle: "History of NUSUK",
+      description: "From **2019 to 2026**, the U.S. Hajj experience shifted from traditional agencies to digital platforms. In **2019**, about 20,000 U.S. pilgrims traveled through agencies like Manara, Dar El Salaam, and Adam Travel. During **2020–2021**, no non-Saudi pilgrims performed Hajj due to COVID-19. In **2022**, Hajj moved online via the **Motawif** platform, with around 3,500 U.S. pilgrims participating independently, while only **Manara Travel** and **Caravan 72** led group Hajj trips. The **first year of Nusuk (2023)** saw over 40,000 U.S. applications but only 4,000 completed Hajj — and Manara Travel was the only agency to organize a group. In **2024**, more U.S. agencies joined through partnerships with Saudi operators, and about 8,000 Americans performed Hajj. By **2025**, visa quotas for the U.S. were reduced, and around 5,000 pilgrims completed Hajj with stronger agency involvement. For **2026**, the Saudi Ministry has confirmed the same **5,000-visa allotment** for U.S. pilgrims.",
       image: "/hajj221.jpg"
     }
   ];
