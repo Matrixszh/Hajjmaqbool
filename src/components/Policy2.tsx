@@ -16,37 +16,38 @@ interface Policy {
 
 const MyPolicies: React.FC = () => {
   const policies: Policy[] = [
-    {
-      id: 1,
-      name: "Quality Assurance",
-      description: "We ensure the highest standards of quality in every project through rigorous testing, premium materials, and expert craftsmanship that stands the test of time.",
-      icon: Shield
-    },
-    {
-      id: 2,
-      name: "Timely Delivery",
-      description: "We commit to delivering all projects on schedule through efficient project management, proper planning, and dedicated resource allocation to meet deadlines.",
-      icon: Clock
-    },
-    {
-      id: 3,
-      name: "Customer Satisfaction",
-      description: "Our clients' satisfaction is our top priority. We maintain open communication, address concerns promptly, and ensure complete satisfaction with every project.",
-      icon: Users
-    },
-    {
-      id: 4,
-      name: "Professional Excellence",
-      description: "We maintain the highest level of professionalism through continuous training, industry best practices, and adherence to international construction standards.",
-      icon: Award
-    },
-    {
-      id: 5,
-      name: "Transparent Process",
-      description: "We believe in complete transparency throughout the construction process, providing regular updates, clear documentation, and honest communication at every stage.",
-      icon: CheckCircle
-    }
-  ];
+  {
+    id: 1,
+    name: "Travel Agent Application & Payment Policy",
+    description: "Every pilgrim must register and pay directly through the Nusuk Hajj Portal. Travel agents cannot submit applications or handle payments on your behalf.",
+    icon: Shield
+  },
+  {
+    id: 2,
+    name: "Travel Agent Support Services",
+    description: "Travel agents can assist with package guidance, organize group support, help with account setup, travel logistics, language translation, and on-ground coordination during Hajj.",
+    icon: Users
+  },
+  {
+    id: 3,
+    name: "Hajj Vaccination Requirement",
+    description: "A valid Quadruple meningitis (ACYW) vaccine certificate is mandatory for adults and children over one year old, administered at least 10 days before arriving in Hajj areas.",
+    icon: Award
+  },
+  {
+    id: 4,
+    name: "Nusuk Verification Timeline",
+    description: "Verification can take a few days to several weeks early in registration, but often reduces to 24–48 hours later. Additional screening may apply to non-U.S. citizens or Green Card holders.",
+    icon: Clock
+  },
+  {
+    id: 5,
+    name: "Hajj Package Pricing Policy",
+    description: "Prices are set by Saudi operators and remain the same whether booked directly or through a trusted travel agent, who may provide added support without increasing the cost.",
+    icon: CheckCircle
+  }
+];
+
 
   return (
     <section className="py-20 bg-white">

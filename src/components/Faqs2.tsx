@@ -8,22 +8,31 @@ interface FAQ {
 }
 
 const faqs: FAQ[] = [
-  {
-    question: "What services do you offer?",
-    answer: "We offer a range of automotive repair and maintenance services including engine repairs, brake service, oil changes, and more.",
-  },
-  {
-    question: "How can I schedule an appointment?",
-    answer: "You can schedule an appointment by calling us directly or using the online booking system on our website.",
-  },
-  {
-    question: "Do you offer any warranties on your services?",
-    answer: "Yes, we offer warranties on most of our services. Please ask for details when you bring your vehicle in.",
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept various payment methods including cash, credit/debit cards, and electronic transfers.",
-  },
+{
+  question: "How can I avoid delays during Nusuk verification?",
+  answer: "Ensure all documents are valid, clear, correctly uploaded, and match your identification. Check your Nusuk account regularly for updates.",
+},
+{
+  question: "Do travel agents still play a role in Hajj?",
+  answer: "Yes. They guide through account setup, compare packages, explain inclusions, manage communication, and provide on-ground support during Hajj.",
+},
+{
+  question: "How to choose a reliable Hajj travel agent?",
+  answer: "Verify that they are affiliated with an approved Nusuk Hajj Operator. Trusted U.S. partners include Manara Travel, Dar El Salaam Travel, and Adam Travel.",
+},
+{
+  question: "How did the Hajj process in the U.S. change from 2019–2026?",
+  answer: "2019: traditional agencies; 2020–2021: COVID cancellations; 2022: online via Motawif; 2023–2025: Nusuk portal with limited agency support; 2026: continued Nusuk portal with 5,000 U.S. visas.",
+},
+{
+  question: "Can agents assist with technical issues during registration?",
+  answer: "Yes. Agents can help with account setup, troubleshooting, and navigating the Nusuk system.",
+},
+{
+  question: "What should pilgrims prepare in advance for Hajj 2026?",
+  answer: "Passport, passport-sized photo, personal details, vaccination certificate, and travel logistics. Monitor package announcements starting March–April 2026.",
+},
+
 ];
 
 const FaqItem: React.FC<{ faq: FAQ; isExpanded: boolean; onToggle: () => void }> = ({ faq, isExpanded, onToggle }) => (

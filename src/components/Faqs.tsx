@@ -9,30 +9,31 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "What challenges did pilgrims face when using the Nusuk platform directly?",
-    answer: "Pilgrims reported technical glitches, limited availability of packages, and payment processing issues, which created frustration and uncertainty during the booking process.",
+    question: "Can a travel agent submit my Hajj application?",
+    answer: "No. Only you can submit your application through the Nusuk Hajj Portal. Agents cannot submit on your behalf.",
   },
   {
-    question: "Why did Saudi companies reintroduce travel agents into the Hajj process?",
-    answer: "Saudi companies struggled with the logistics of managing large groups of pilgrims on their own. To address these challenges, they brought back experienced travel agents to guide pilgrims and ensure smoother journeys.",
+    question: "Can travel agents pay for my Hajj package?",
+    answer: "No. All payments must go through Nusuk directly.",
   },
   {
-    question: "What risks do pilgrims face if they book their Hajj packages directly through Nusuk?",
-    answer: "When pilgrims book directly through Nusuk, agents are not compensated to look after them, which can leave pilgrims without the dedicated support and guidance they need during Hajj.",
+    question: "How can travel agents help after application submission?",
+    answer: "They can organize guided groups, offer prep sessions, assist with travel logistics, provide language translation, and support during Hajj days.",
   },
   {
-    question: "How does booking through a travel agent improve the Hajj experience?",
-    answer: "Booking through a travel agent ensures that the agent is financially motivated to support you, offering personalized care, guidance, and accountability throughout your pilgrimage.",
+    question: "What documents should I prepare for Hajj 2026?",
+    answer: "Valid passport, passport-sized photo, and travel details. Ensure your passport is valid at least six months beyond Hajj.",
   },
   {
-    question: "What personalized services do travel agents provide during Hajj?",
-    answer: "Travel agents understand the unique needs of pilgrims from their region, provide tailored advice, and assist with accommodations, transportation, and other logistical challenges.",
+    question: "When should I look out for package announcements?",
+    answer: "Package announcements and registration openings may start as early as March–April 2026.",
   },
   {
-    question: "Why is it highly recommended to book Hajj through an authorized travel agent?",
-    answer: "An experienced, authorized travel agent guarantees that you will have dedicated support, on-the-ground expertise, and peace of mind, ensuring your journey is as smooth and spiritually fulfilling as possible.",
+    question: "Do Hajj packages cost more through a travel agent?",
+    answer: "No. Prices are standardized by Saudi operators. Travel agents may provide extra guidance, but costs remain the same.",
   },
 ];
+
 
 
 const FaqItem: React.FC<{ faq: FAQ; isExpanded: boolean; onToggle: () => void }> = ({ faq, isExpanded, onToggle }) => (

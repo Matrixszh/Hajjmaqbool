@@ -21,10 +21,10 @@ const TeamSection = () => {
           {/* Right side - Content */}
           <div className=" p-12 flex flex-col justify-center">
             <h2 className="text-4xl font-medium text-white mb-4">
-              If you hold a second  <span className="italic font-light">passport</span> you may also explore the Pakistani Route for Hajj.
+              Everything you need to know about  <span className="italic font-light">Hajj</span> travel agents, and Nusuk guidance .
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-               Working with a reputable travel agent who specializes in dual nationals may help
+               Prepare for Hajj with confidence by understanding travel agents’ roles, vaccination requirements, and the Nusuk verification process. Our comprehensive FAQs guide you step-by-step to ensure a smooth and fulfilling pilgrimage experience.
             </p>
             <div className="flex flex-justify">
               <Link to="/contact">
