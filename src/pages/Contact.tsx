@@ -103,8 +103,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             US TODAY
           </h1>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed lg:text-xl">
-            Finding a home or building one isn't just about keys and contracts—it's about starting the doors 
-            on a life that's specifically sustainable and make memories happen.
+            Have questions or need assistance? Reach out to us and our team will respond promptly to help with your inquiries and guide you every step of the way
           </p>
         </div>
       </section>
@@ -130,7 +129,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               Send us a <span className="italic font-light text-green-400">Message</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              Have a project in mind? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
+              We’re here to support you. Whether you have feedback, need information, or want to start a conversation, contact us and we’ll ensure your message is addressed quickly and efficiently.
             </p>
           </div>
 
