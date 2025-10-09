@@ -41,12 +41,12 @@ const HeroSection = () => {
           <p className="text-white/70 text-sm uppercase tracking-wider mb-4">In collaboration with</p>
           <div className="flex justify-center items-center gap-12">
             <img
-              src="/logo.png"
+              src="/Nusuk.png"
               alt="Collaborator 1 Logo"
               className="h-8 lg:h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
             />
             <img
-              src="/logo.png"
+              src="/hajjlogo.png"
               alt="Collaborator 2 Logo"
               className="h-8 lg:h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
             />
