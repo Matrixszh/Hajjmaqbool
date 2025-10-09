@@ -34,38 +34,36 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      const formDataToSend = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSend.append(key, value);
-      });
-      if (passportFront) formDataToSend.append("passportFront", passportFront);
-      if (passportBack) formDataToSend.append("passportBack", passportBack);
+  try {
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('message', formData.message);
+    if (passportFront) formDataToSend.append('passportFront', passportFront);
+    if (passportBack) formDataToSend.append('passportBack', passportBack);
 
-      const res = await fetch('/api/send-email', {
-        method: 'POST',
-        body: formDataToSend,
-      });
+    const res = await fetch('/api/send-email', {
+      method: 'POST',
+      body: formDataToSend,
+    });
 
-      if (res.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', phone: '', email: '', message: '' });
-        setPassportFront(null);
-        setPassportBack(null);
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
+    if (res.ok) {
+      setSubmitStatus('success');
+      // Reset form
+    } else {
       setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus('idle'), 5000);
     }
-  };
+  } catch (error) {
+    setSubmitStatus('error');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-luxury-darker">
