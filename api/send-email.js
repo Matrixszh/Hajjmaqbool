@@ -1,7 +1,6 @@
-// api/send-email.js
 import formidable from "formidable";
-import nodemailer from "nodemailer";
 import fs from "fs/promises";
+import nodemailer from "nodemailer";
 import { randomBytes } from "crypto";
 
 export const config = {
@@ -11,14 +10,12 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  // Allow only POST
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
   try {
-    // Parse multipart/form-data
     const form = formidable({ multiples: true });
     const [fields, files] = await form.parse(req);
 
@@ -27,7 +24,6 @@ export default async function handler(req, res) {
     const phone = fields.phone?.[0] || fields.phone || "";
     const message = fields.message?.[0] || fields.message || "";
 
-    // Configure Nodemailer
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 587),
@@ -38,9 +34,8 @@ export default async function handler(req, res) {
       },
     });
 
-    // Attach files if available
     const attachments = [];
-    const addFile = async (file) => {
+    const attachFile = async (file) => {
       if (!file) return;
       const buffer = await fs.readFile(file[0].filepath);
       attachments.push({
@@ -51,15 +46,14 @@ export default async function handler(req, res) {
       });
     };
 
-    await addFile(files.passportFront);
-    await addFile(files.passportBack);
+    await attachFile(files.passportFront);
+    await attachFile(files.passportBack);
 
-    // Send the email
     await transporter.sendMail({
       from: process.env.SMTP_USER,
       to: process.env.RECIPIENT_EMAIL || "contact@yourcompany.com",
       subject: `New Contact from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+      text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`,
       attachments,
     });
 
