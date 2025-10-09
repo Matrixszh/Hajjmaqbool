@@ -27,12 +27,24 @@ const Contact = () => {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'front' | 'back') => {
-    if (e.target.files && e.target.files[0]) {
-      type === 'front'
-        ? setPassportFront(e.target.files[0])
-        : setPassportBack(e.target.files[0]);
-    }
-  };
+  const file = e.target.files?.[0];
+  if (!file) return;
+
+  // 🔹 2 MB limit per file
+  const maxSize = 2 * 1024 * 1024; // 2MB
+  if (file.size > maxSize) {
+    alert("Please upload images smaller than 2 MB.");
+    e.target.value = ""; // reset the input
+    return;
+  }
+
+  // ✅ Store valid file
+  if (type === 'front') {
+    setPassportFront(file);
+  } else {
+    setPassportBack(file);
+  }
+};
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
