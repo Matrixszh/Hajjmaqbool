@@ -3,10 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
-import LoadingAnimation from "@/components/LoadingAnimation";
-import emailjs from '@emailjs/browser';
-import { Link } from "react-router-dom";
 import Waves from "@/components/GradBlur";
+import { Link } from "react-router-dom";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,10 +13,11 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [passportFront, setPassportFront] = useState<File | null>(null);
+  const [passportBack, setPassportBack] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  // Handle input changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -26,47 +26,44 @@ const Contact = () => {
     }));
   };
 
-  // Handle form submission
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'front' | 'back') => {
+    if (e.target.files && e.target.files[0]) {
+      type === 'front'
+        ? setPassportFront(e.target.files[0])
+        : setPassportBack(e.target.files[0]);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Replace these with your actual EmailJS credentials
-      const result = await emailjs.send(
-        'YOUR_SERVICE_ID',      // Replace with your service ID
-        'YOUR_TEMPLATE_ID',     // Replace with your template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          to_name: 'Amana Construction', // Your company name
-        },
-        'YOUR_PUBLIC_KEY'       // Replace with your public key
-      );
+      const formDataToSend = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value);
+      });
+      if (passportFront) formDataToSend.append("passportFront", passportFront);
+      if (passportBack) formDataToSend.append("passportBack", passportBack);
 
-      console.log('Email sent successfully:', result);
-      setSubmitStatus('success');
-      
-      // Reset form
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        message: ''
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        body: formDataToSend,
       });
 
+      if (res.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', phone: '', email: '', message: '' });
+        setPassportFront(null);
+        setPassportBack(null);
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
-      console.error('Error sending email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-      
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
+      setTimeout(() => setSubmitStatus('idle'), 5000);
     }
   };
 
@@ -95,19 +92,18 @@ const Contact = () => {
         </div>
       </section>
       <Waves
-  lineColor="#6a6767"
-  backgroundColor=""
-  waveSpeedX={0.02}
-  waveSpeedY={0.01}
-  waveAmpX={40}
-  waveAmpY={20}
-  friction={0.9}
-  tension={0.01}
-  maxCursorMove={120}
-  xGap={12}
-  yGap={36}
-/>
-     
+        lineColor="#6a6767"
+        backgroundColor=""
+        waveSpeedX={0.02}
+        waveSpeedY={0.01}
+        waveAmpX={40}
+        waveAmpY={20}
+        friction={0.9}
+        tension={0.01}
+        maxCursorMove={120}
+        xGap={12}
+        yGap={36}
+      />
 
       {/* Contact Form Section */}
       <section className="py-20 bg-gray-100">
@@ -123,7 +119,6 @@ const Contact = () => {
 
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              {/* Status Messages */}
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
                   <p className="font-semibold">Message sent successfully!</p>
@@ -182,6 +177,29 @@ const Contact = () => {
                     className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4 resize-none"
                   />
                 </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Passport Front</label>
+                  <Input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleFileChange(e, 'front')}
+                    required
+                    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Passport Back</label>
+                  <Input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleFileChange(e, 'back')}
+                    required
+                    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
+                  />
+                </div>
+
                 <div className="text-center pt-4">
                   <Button 
                     type="submit"
@@ -217,48 +235,48 @@ const Contact = () => {
       </section>
 
       {/* Footer */}
-    <footer className="bg-gray-900 py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <h4 className="text-white font-bold mb-4">Let's Talk</h4>
-            <p className="text-gray-400 text-sm">
-              We'd love to hear from you. Call us at
-            </p>
-            <div className="flex justify-center items-center mt-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 overflow-hidden">
-                <img
-                  src="/logo.png" // Replace with your logo path
-                  alt="Company Logo"
-                  className="w-50 h-50 object-contain"
-                />
+      <footer className="bg-gray-900 py-12">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <h4 className="text-white font-bold mb-4">Let's Talk</h4>
+              <p className="text-gray-400 text-sm">
+                We'd love to hear from you. Call us at
+              </p>
+              <div className="flex justify-center items-center mt-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 overflow-hidden">
+                  <img
+                    src="/logo.png"
+                    alt="Company Logo"
+                    className="w-50 h-50 object-contain"
+                  />
+                </div>
+                <Link to="/contact">
+                  <Button className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-6">
+                    Let's Connect
+                  </Button>
+                </Link>
               </div>
-              <Link to="/contact">
-              <Button className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-6">
-                Let's Connect
-              </Button>
-              </Link>
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div className="flex justify-center space-x-4">
+              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">f</span>
+              </a>
+              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">t</span>
+              </a>
             </div>
           </div>
-          <div>
-            <p className="text-gray-400 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div className="flex justify-center space-x-4">
-            <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-              <span className="text-white text-xs">f</span>
-            </a>
-            <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-              <span className="text-white text-xs">t</span>
-            </a>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p className="text-gray-500 text-sm">Privacy Policy</p>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-500 text-sm">Privacy Policy</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
     </div>
   );
 };
