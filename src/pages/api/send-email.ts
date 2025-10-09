@@ -1,9 +1,9 @@
-// pages/api/send-email.ts
+// /pages/api/send-email.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import formidable from 'formidable';
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
-import { promises as fsPromises } from 'fs';
+import { randomBytes } from 'crypto';
 import nodemailer from 'nodemailer';
 
 export const config = {
@@ -12,20 +12,19 @@ export const config = {
   },
 };
 
-// Parse form data correctly
+// Helper to parse form data safely
 const parseForm = async (req: NextApiRequest) => {
   const form = formidable({
     uploadDir: path.join(process.cwd(), '/public/uploads'),
     keepExtensions: true,
     maxFileSize: 10 * 1024 * 1024, // 10 MB
-    multiples: true,
+    maxFields: 10,
+    filter: (part) => part.name === 'passportFront' || part.name === 'passportBack' || part.mimetype === null,
   });
 
   // Ensure upload directory exists
   const uploadDir = path.join(process.cwd(), '/public/uploads');
-  if (!fs.existsSync(uploadDir)) {
-    await fsPromises.mkdir(uploadDir, { recursive: true });
-  }
+  await fs.mkdir(uploadDir, { recursive: true });
 
   return new Promise<{ fields: formidable.Fields; files: formidable.Files }>((resolve, reject) => {
     form.parse(req, (err, fields, files) => {
@@ -36,7 +35,6 @@ const parseForm = async (req: NextApiRequest) => {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Handle preflight
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Methods', 'POST');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -44,13 +42,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { fields, files } = await parseForm(req);
 
-    const name = (Array.isArray(fields.name) ? fields.name[0] : fields.name) || '';
+    const name = (Array.isArray(fields.name) ? fields.name[0] : fields.name) || 'Unknown';
     const phone = (Array.isArray(fields.phone) ? fields.phone[0] : fields.phone) || '';
     const email = (Array.isArray(fields.email) ? fields.email[0] : fields.email) || '';
     const message = (Array.isArray(fields.message) ? fields.message[0] : fields.message) || '';
@@ -70,19 +68,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const attachments = [];
 
-    // Helper to process file
-    const processFile = async (file: formidable.File | formidable.File[] | null) => {
+    const processFile = async (file: any, fieldName: string) => {
       if (!file) return null;
       const fileArray = Array.isArray(file) ? file : [file];
       const fileObj = fileArray[0];
-      const filePath = fileObj.filepath;
-      const fileName = fileObj.originalFilename || 'upload.jpg';
-      const fileBuffer = await fsPromises.readFile(filePath);
-      return { filename: fileName, content: fileBuffer };
+      if (!fileObj || !fileObj.filepath) return null;
+
+      try {
+        const buffer = await fs.readFile(fileObj.filepath);
+        return {
+          filename: fileObj.originalFilename || `${fieldName}-${randomBytes(4).toString('hex')}.jpg`,
+          content: buffer,
+        };
+      } catch (err) {
+        console.error(`Failed to read ${fieldName} file:`, err);
+        return null;
+      }
     };
 
-    const frontAttachment = await processFile(passportFront);
-    const backAttachment = await processFile(passportBack);
+    const frontAttachment = await processFile(passportFront, 'passport-front');
+    const backAttachment = await processFile(passportBack, 'passport-back');
 
     if (frontAttachment) attachments.push(frontAttachment);
     if (backAttachment) attachments.push(backAttachment);
@@ -97,7 +102,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ message: 'Email sent successfully!' });
   } catch (err: any) {
-    console.error('Error sending email:', err);
-    return res.status(500).json({ error: 'Failed to send email' });
+    console.error('Server error:', err);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
