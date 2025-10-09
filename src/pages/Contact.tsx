@@ -48,6 +48,7 @@ const Contact = () => {
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
+  setSubmitStatus('idle');
 
   try {
     const formDataToSend = new FormData();
@@ -58,14 +59,20 @@ const handleSubmit = async (e: React.FormEvent) => {
     if (passportFront) formDataToSend.append('passportFront', passportFront);
     if (passportBack) formDataToSend.append('passportBack', passportBack);
 
-    // Ensure this hits your Vercel deployment
     const res = await fetch(`${window.location.origin}/api/send-email`, {
-  method: "POST",
-  body: formDataToSend,
-});
+      method: 'POST',
+      body: formDataToSend,
+    });
 
     if (res.ok) {
       setSubmitStatus('success');
+      setFormData({ name: '', phone: '', email: '', message: '' });
+      setPassportFront(null);
+      setPassportBack(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // hide message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
     } else {
       setSubmitStatus('error');
     }
@@ -75,6 +82,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     setIsSubmitting(false);
   }
 };
+
 
   return (
     <div className="min-h-screen bg-luxury-darker">
@@ -188,26 +196,40 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Passport Front</label>
-                  <Input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => handleFileChange(e, 'front')}
-                    required
-                    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
-                  />
-                </div>
+  <label className="block text-sm font-medium text-gray-700 mb-2">
+    Passport Front
+  </label>
+  <Input
+    type="file"
+    accept="image/*"
+    onChange={(e) => handleFileChange(e, 'front')}
+    required
+    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
+  />
+  {passportFront && (
+    <p className="mt-2 text-sm text-gray-600">
+      Selected: <span className="font-medium">{passportFront.name}</span>
+    </p>
+  )}
+</div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Passport Back</label>
-                  <Input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => handleFileChange(e, 'back')}
-                    required
-                    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
-                  />
-                </div>
+<div>
+  <label className="block text-sm font-medium text-gray-700 mb-2">
+    Passport Back
+  </label>
+  <Input
+    type="file"
+    accept="image/*"
+    onChange={(e) => handleFileChange(e, 'back')}
+    required
+    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
+  />
+  {passportBack && (
+    <p className="mt-2 text-sm text-gray-600">
+      Selected: <span className="font-medium">{passportBack.name}</span>
+    </p>
+  )}
+</div>
 
                 <div className="text-center pt-4">
                   <Button 

@@ -52,10 +52,28 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: process.env.SMTP_USER,
       to: process.env.RECIPIENT_EMAIL || "contact@yourcompany.com",
-      subject: `New Contact from ${name}`,
-      text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`,
+      subject: `📩 New Contact Form Submission from ${name}`,
+      html: `
+    <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin:auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+      <h2 style="color: #16a34a; text-align:center;">New Contact Message</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p style="background:#f9f9f9; padding:10px; border-radius:5px;">${message}</p>
+      ${attachments.length
+          ? `<p><strong>Attachments:</strong> ${attachments
+            .map((a) => a.filename)
+            .join(", ")}</p>`
+          : ""
+        }
+      <hr style="margin-top:20px;">
+      <p style="font-size:12px; color:#666; text-align:center;">Sent automatically from your website contact form.</p>
+    </div>
+  `,
       attachments,
     });
+
 
     return res.status(200).json({ message: "Email sent successfully!" });
   } catch (err) {
