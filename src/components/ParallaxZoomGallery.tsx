@@ -38,22 +38,22 @@ export default function ParallaxZoomGallery() {
       className: 'w-[20vw] h-[45vh] -top-[10vh] -left-[25vw]'
     },
     {
-      src: '/hajj231.jpg',
+      src: '/hajj4.jpg',
       scale: scale5,
       className: 'w-[25vw] h-[25vh] left-[27.5vw]'
     },
     {
-      src: '/hajj221.jpg',
+      src: '/hajj5.jpg',
       scale: scale6,
       className: 'w-[20vw] h-[25vh] top-[27.5vh] left-[5vw]'
     },
     {
-      src: '/hajj253.jpg',
+      src: '/hajj6.jpg',
       scale: scale8,
       className: 'w-[30vw] h-[25vh] top-[27.5vh] -left-[22.5vw]'
     },
     {
-      src: '/hajj241.jpg',
+      src: '/hajj7.jpg',
       scale: scale9,
       className: 'w-[15vw] h-[15vh] top-[22.5vh] left-[25vw]'
     }
