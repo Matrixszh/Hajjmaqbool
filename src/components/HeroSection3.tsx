@@ -18,7 +18,7 @@ const HeroSection = () => {
         <h1 className="px-10 text-hero font-bold text-white mb-6 leading-tight">
           NUSUK HAJJ ASSISTANCE
           <br />
-          COUNSEL
+          COUNCIL
         </h1>
         
         <p className="px-10 text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed lg:text-xl">

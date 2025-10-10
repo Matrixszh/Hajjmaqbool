@@ -57,7 +57,7 @@ const MyPolicies: React.FC = () => {
             Our <span className="italic font-light text-green-400">Policies</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            We are COUNSELd to these core principles that guide every aspect of our work and ensure exceptional results for our clients.
+            We are COUNCILd to these core principles that guide every aspect of our work and ensure exceptional results for our clients.
           </p>
         </div>
 
