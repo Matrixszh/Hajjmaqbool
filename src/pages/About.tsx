@@ -58,46 +58,22 @@ const About = () => {
           <div className="space-y-12">
             {[
               {
-                name: "Ather Ahmed",
+                name: "Rawaf Mina",
                 position: "Managing Director & CEO",
-                image: "/322615dd-9756-4f76-bc63-8df394541271.JPG",
-                description: "With 32 years of construction experience and 22 years of international expertise, Ather Ahmed leads Amana Constructions with a vision for engineering excellence and innovation. His extensive background includes managing mega-projects and scaling companies from startup to industry leaders."
+                image: "/Rawafmina.png",
+                description: "Rawaf Mina is a pioneering startup dedicated to serving the guests of Allah with excellence. Since its establishment in Rajab 1444 AH, it has provided top-tier hospitality to over 350,000 pilgrims from diverse backgrounds. "
               },
               {
-                name: "Akhter Ahmed",
+                name: "Ithraa Alkhair",
                 position: "Director",
                 image: "/akhter.jpg",
-                description: "Akhter Ahmed contributes extensive experience in project management and construction operations. His expertise in coordinating complex construction projects ensures timely delivery and maintains the highest standards of quality and safety across all Amana projects."
+                description: "As Ithraa Alkhair, we are a distinguished and comprehensive Hajj company offering a range of services to the guests of the Merciful. We are committed to providing an exceptional and comfortable Hajj experience for pilgrims"
               },
               {
-                name: "Mohammed Zaker",
+                name: "Abdul Lateef Jameel",
                 position: "Director",
-                image: "/zaker.jpg",
+                image: "/alj-logo.png",
                 description: "Mohammed Zaker provides valuable insights in construction planning and execution. His technical knowledge and attention to detail help ensure that every Amana project meets the highest engineering standards and exceeds client expectations."
-              },
-              {
-                name: "Iftekhar Ahmed",
-                position: "Director",
-                image: "/IMG_4120.jpg",
-                description: "Iftekhar Ahmed brings strategic leadership and operational expertise to Amana Constructions. His focus on quality assurance and client satisfaction has been instrumental in building the company's reputation for delivering exceptional construction projects."
-              },
-              {
-                name: "Mohammed Zaidan Ahmed",
-                position: "Project Manager",
-                image: "/zaidan.jpg",
-                description: "Mohammed Zaidan Ahmed brings strategic leadership and operational expertise to Amana Constructions. His focus on quality assurance and client satisfaction has been instrumental in building the company's reputation for delivering exceptional construction projects."
-              },
-              {
-                name: "Mohammed Ziyan Ahmed",
-                position: "Project Manager",
-                image: "/IMG_7459.JPG",
-                description: "Mohammed Ziyan Ahmed contributes extensive experience in project management and construction operations. His expertise in coordinating complex construction projects ensures timely delivery and maintains the highest standards of quality and safety across all Amana projects."
-              },
-              {
-                name: "Mohammed Zamaan Ahmed",
-                position: "Project Manager",
-                image: "/zaman.jpg",
-                description: "Mohammed Zamaan Ahmed provides valuable insights in construction planning and execution. His technical knowledge and attention to detail help ensure that every Amana project meets the highest engineering standards and exceeds client expectations."
               }
             ].map((member, index) => (
               <motion.div
@@ -118,7 +94,7 @@ const About = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-48 h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                    className="w-48 h-48 object-fill rounded-lg transition-transform duration-300 group-hover:scale-110"
                   />
                   {/* Hover overlay */}
                   <motion.div
