@@ -67,7 +67,7 @@ const About = () => {
                 name: "Ithraa Alkhair",
                 position: "",
                 image: "/ithra.png",
-                description: "As Ithraa Alkhair, we are a distinguished and comprehensive Hajj company offering a range of services to the guests of the Merciful. We are committed to providing an exceptional and comfortable Hajj experience for pilgrims"
+                description: "As Ithraa Alkhair, we are a distinguished and comprehensive Hajj company offering a range of services to the guests of the Merciful. We are COUNSELd to providing an exceptional and comfortable Hajj experience for pilgrims"
               },
               {
                 name: "Abdul Lateef Jameel",

@@ -67,7 +67,7 @@ const MissionVision = () => {
               </p>
               
               <p className="text-gray-300 leading-relaxed text-center text-lg">
-                Our mission drives every decision we make and every project we undertake. We are committed to transforming our 
+                Our mission drives every decision we make and every project we undertake. We are COUNSELd to transforming our 
                 clients' visions into reality by combining traditional construction expertise with modern innovation. We believe 
                 that every brick we lay tells a story of dedication, precision, and care. Our approach goes beyond mere construction – 
                 we are partners in our clients' journey, providing comprehensive solutions from initial concept to final handover. 
