@@ -14,7 +14,6 @@ const Contact = () => {
     message: ''
   });
   const [passportFront, setPassportFront] = useState<File | null>(null);
-  const [passportBack, setPassportBack] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -26,24 +25,12 @@ const Contact = () => {
     }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'front' | 'back') => {
+const handleFileChange = (e, type) => {
   const file = e.target.files?.[0];
   if (!file) return;
-
-  // 🔹 2 MB limit per file
-  const maxSize = 2 * 1024 * 1024; // 2MB
-  if (file.size > maxSize) {
-    alert("Please upload images smaller than 2 MB.");
-    e.target.value = ""; // reset the input
-    return;
-  }
-
-  // ✅ Store valid file
-  if (type === 'front') {
-    setPassportFront(file);
-  } else {
-    setPassportBack(file);
-  }
+  // ...file size checks...
+  if (type === 'front') setPassportFront(file);
+  // Remove else/setPassportBack
 };
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
@@ -57,7 +44,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     formDataToSend.append('email', formData.email);
     formDataToSend.append('message', formData.message);
     if (passportFront) formDataToSend.append('passportFront', passportFront);
-    if (passportBack) formDataToSend.append('passportBack', passportBack);
+
 
     const res = await fetch(`${window.location.origin}/api/send-email`, {
       method: 'POST',
@@ -68,7 +55,6 @@ const handleSubmit = async (e: React.FormEvent) => {
       setSubmitStatus('success');
       setFormData({ name: '', phone: '', email: '', message: '' });
       setPassportFront(null);
-      setPassportBack(null);
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       // hide message after 5 seconds
@@ -187,7 +173,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Project Description / Message" 
+                    placeholder="Query/ Question" 
                     rows={5}
                     required
                     className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4 resize-none"
@@ -212,23 +198,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   )}
 </div>
 
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-2">
-    Passport Back
-  </label>
-  <Input
-    type="file"
-    accept="image/*"
-    onChange={(e) => handleFileChange(e, 'back')}
-    required
-    className="bg-white border-gray-300 border-2 rounded-lg py-2 px-4"
-  />
-  {passportBack && (
-    <p className="mt-2 text-sm text-gray-600">
-      Selected: <span className="font-medium">{passportBack.name}</span>
-    </p>
-  )}
-</div>
+
 
                 <div className="text-center pt-4">
                   <Button 

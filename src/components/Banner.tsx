@@ -11,7 +11,7 @@ export function StickyBannerDemo() {
             href="tel:+966XXXXXXXXXXXX" 
             className="text-center text-green-400 transition duration-200 hover:underline"
           >
-            +966 XXXXXXXXX
+            +966920031201
           </a>
         </p>
       </StickyBanner>

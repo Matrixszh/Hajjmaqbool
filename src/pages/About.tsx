@@ -59,21 +59,27 @@ const About = () => {
             {[
               {
                 name: "Rawaf Mina",
-                position: "Managing Director & CEO",
+                position: "",
                 image: "/Rawafmina.png",
                 description: "Rawaf Mina is a pioneering startup dedicated to serving the guests of Allah with excellence. Since its establishment in Rajab 1444 AH, it has provided top-tier hospitality to over 350,000 pilgrims from diverse backgrounds. "
               },
               {
                 name: "Ithraa Alkhair",
-                position: "Director",
-                image: "/akhter.jpg",
+                position: "",
+                image: "/ithra.png",
                 description: "As Ithraa Alkhair, we are a distinguished and comprehensive Hajj company offering a range of services to the guests of the Merciful. We are committed to providing an exceptional and comfortable Hajj experience for pilgrims"
               },
               {
                 name: "Abdul Lateef Jameel",
-                position: "Director",
+                position: "",
                 image: "/alj-logo.png",
                 description: "Mohammed Zaker provides valuable insights in construction planning and execution. His technical knowledge and attention to detail help ensure that every Amana project meets the highest engineering standards and exceeds client expectations."
+              },
+              {
+                name: "AL Rajhi Likhdemat Al Tajaria Masanda",
+                position: "",
+                image: "/Rajhi.png",
+                description: "One of the companies licensed by the Ministry of Hajj and Umrah to provide services to pilgrims abroad. The company seeks to be a pioneer in the field of providing hospitality services to the guests of Allah, to enrich the pilgrim's experience and improve the services, so that they can perform the rituals easily and conveniently by providing comfort and hospitality standards to the pilgrims and providing a comprehensive package of services from the moment of arrival to the Kingdom until farewell and departure with Allah's blessings"
               }
             ].map((member, index) => (
               <motion.div
