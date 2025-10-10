@@ -16,9 +16,9 @@ const HeroSection = () => {
       {/* Content */}
       <div className="lg:px-6  mx-6 text-center relative z-10">
         <h1 className="px-10 text-hero font-bold text-white mb-6 leading-tight">
-          NUSUK HAJJ ASISTANCE
+          NUSUK HAJJ ASSISTANCE
           <br />
-          COMMITTE
+          COMMITTEE
         </h1>
         
         <p className="px-10 text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed lg:text-xl">
@@ -26,22 +26,22 @@ const HeroSection = () => {
         </p>
 
         <div className="flex px-[15vh] lg:px-12 py-3 flex-col sm:flex-row gap-4 justify-center">
-<Link to="/contact">
+<Link to="/projects">
 <Button 
   size="lg"
   variant="outline"
   className="bg-white/30 border-white text-white hover:bg-white hover:text-luxury-darker  text-lg rounded-xl"
 >
-  Register Now
+  Read Before Planning For Hajj
 </Button>
 </Link>
     
         </div>
         <div className="mt-2 px-4">
-          <p className="text-white/70 text-sm uppercase tracking-wider mb-4">In collaboration with</p>
+          
           <div className="flex justify-center items-center gap-12">
             <img
-              src="/Nusuk.png"
+              src="/NusukHajj.svg"
               alt="Collaborator 1 Logo"
               className="h-8 lg:h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
             />

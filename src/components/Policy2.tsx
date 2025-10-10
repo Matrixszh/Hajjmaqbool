@@ -4,9 +4,10 @@ import {
   Clock, 
   Users, 
   Award, 
-  CheckCircle 
-} from 'lucide-react';
+  CheckCircle, 
 
+} from 'lucide-react';
+import { Link } from "react-router-dom";
 interface Policy {
   id: number;
   name: string;
@@ -91,6 +92,14 @@ const MyPolicies: React.FC = () => {
             );
           })}
         </div>
+        <div className="pt-10 flex flex-justify justify-center">
+                      <Link to="/projects">
+                      <button className="text-sm px-[3] bg-gradient-to-b from-emerald-600 to-black border-white border-2 text-white hover:bg-none hover:bg-none rounded-full hover:text-green-400 hover:border-green-400   px-8 py-3 text-lg transition-all duration-300 ease-in-out">
+                        Read More 
+                        
+                      </button>
+                      </Link>
+                    </div>
       </div>
     </section>
   );

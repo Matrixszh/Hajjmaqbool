@@ -27,6 +27,34 @@ const ExpandableProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "Registration Open",
+      category: "Oct 7, 2025",
+      description:
+        "Start of pilgrim registration on the Nusuk PLatform",
+      icon: CalendarDays,
+      iconClass: "text-green-400",
+      iconStroke: 1.75,
+    },
+    {
+      id: 2,
+      title: "Availability Of Packages",
+      category: "Dec 21, 2025",
+      description: "These are the sacred days of the pilgrimage, including:8th Dhul Hijjah (May 25) – Arrival at Mina9th Dhul Hijjah (May 26) – Day of Arafah (most important day of Hajj)10th Dhul Hijjah (May 27) – Eid Al-Adha, Tawaf, and Rami (stoning)11th–13th Dhul Hijjah (May 28–30) – Continued stoning of the Jamarat and other rites",
+      icon: ShieldCheck,
+      iconClass: "text-green-400",
+      iconStroke: 1.75,
+    },
+    {
+      id: 3,
+      title: "Sale Of Hajj Packages",
+      category: "Jan 20, 2026",
+      description: "Most pilgrims will begin returning home after completing Tawaf al-Wada (Farewell Tawaf), which typically occurs between May 30 – June 2, depending on their package and flight availability.Some longer-duration packages may return even later if they include extended stays in Medinah or other cities.",
+      icon: Wallet,
+      iconClass: "text-green-400",
+      iconStroke: 1.75,
+    },
+    {
+      id: 1,
       title: "Arrival in Saudi Arabia",
       category: "May 17 – May 21, 2026",
       description:

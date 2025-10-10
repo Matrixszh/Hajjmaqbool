@@ -27,9 +27,9 @@ const TeamSection = () => {
                Prepare for Hajj with confidence by understanding travel agents’ roles, vaccination requirements, and the Nusuk verification process. Our comprehensive FAQs guide you step-by-step to ensure a smooth and fulfilling pilgrimage experience.
             </p>
             <div className="flex flex-justify">
-              <Link to="/contact">
+              <Link to="/projects">
               <button className="text-sm px-[3] bg-gradient-to-b from-emerald-600 to-black border-white border-2 text-white hover:bg-none hover:bg-none rounded-full hover:text-green-400 hover:border-green-400   px-8 py-3 text-lg transition-all duration-300 ease-in-out">
-                Register Now 
+                Read More 
                 
               </button>
               </Link>

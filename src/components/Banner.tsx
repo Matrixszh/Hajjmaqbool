@@ -6,7 +6,7 @@ export function StickyBannerDemo() {
     <div className="relative flex h-[10vh] w-full flex-col overflow-y-auto">
       <StickyBanner className="bg-gradient-to-b from-emerald-900 to-black">
         <p className="text-center text-xl mx-0 max-w-[90%] text-white drop-shadow-md">
-          Hajj Heartline Number{" "}
+          Hajj Hotline Number{" "}
           <a 
             href="tel:+966XXXXXXXXXXXX" 
             className="text-center text-green-400 transition duration-200 hover:underline"
