@@ -179,10 +179,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                     className="bg-white border-gray-300 border-2 rounded-lg text-gray-800 placeholder:text-gray-500 focus:border-green-400 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 py-4 px-4 resize-none"
                   />
                 </div>
-
+                <div>
+                  <h1 className="text-black">
+                    Get real time updates and important information regarding Hajj. Simply upload your passport picture.
+                  </h1>
+                </div>
                 <div>
   <label className="block text-sm font-medium text-gray-700 mb-2">
-    Passport Front
+    Passport Image Optional
   </label>
   <Input
     type="file"
